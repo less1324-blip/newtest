@@ -1,0 +1,1238 @@
+{
+  "vocab": {
+    "intermediate": {
+     "1": [
+       {
+         "word": "air-conditioner",
+         "chinese": "空氣調節機；冷氣機；空調",
+         "example": "All the rooms here are equipped with air-conditioning.",
+         "exampleCn": "這裡所有的房間都有配備空調設備。",
+         "clozeQuestion": "We want to buy a new split-type ______ because the old one is broken.",
+         "clozeCn": "因為冷氣機壞掉了，所以我們想買一台新的窗型冷氣機。",
+         "clozeAnswer": "air-conditioner",
+         "unit": 1
+       },
+       {
+         "word": "air-conditioning",
+         "chinese": "空氣調節機；冷氣機；空調",
+         "example": "Do you know that air-conditiong filters should be cleaned every two weeks?",
+         "exampleCn": "你知道每兩週就要清洗空氣機濾網一次嗎？",
+         "clozeQuestion": "Running the ______ all day tends to make people feel thirsty.",
+         "clozeCn": "開整天的空調會讓人們感到口渴。",
+         "clozeAnswer": "air-conditioning",
+         "unit": 1
+       },
+       {
+         "word": "system",
+         "chinese": "系統",
+         "example": "Our railway system is not as convenient as your country's.",
+         "exampleCn": "我們的鐵路系統不如你們國家的方便。",
+         "clozeQuestion": "The manager decides to install a new anti-virus software ______ on Monday morning.",
+         "clozeCn": "經理決定在星期一早上安裝新的防毒軟體。",
+         "clozeAnswer": "system",
+         "unit": 1
+        },
+        {
+         "word": "bravery",
+         "chinese": "勇敢",
+         "example": "The sergeant was promoted for his bravery.",
+         "exampleCn": "那位士官因他的英勇表現而受到提拔。",
+         "clozeQuestion": "He received a medal for his ______ during the difficult rescue mission.",
+         "clozeCn": "他在那次艱難的救援任務中表現出英勇的行為，因此獲頒勳章。",
+         "clozeAnswer": "bravery",
+         "unit": 1
+        },
+        {
+         "word": "braver",
+         "chinese": "勇敢的",
+         "example": "It was very brave of her to stand up to the bully in class.",
+         "exampleCn": "她能勇敢地在班上對抗惡霸，真是非常有勇氣。",
+         "clozeQuestion": "The ______ firefighter saved the little kitten from the burning building.",
+         "clozeCn": "那位勇敢的消防員從燃燒的建築物中救出了那隻小貓。",
+         "clozeAnswer": "braver",
+         "unit": 1
+        },
+        {
+         "word": "program",
+         "chinese": "節目；程式",
+         "example": "Parents should carefully choose good programs for their children.",
+         "exampleCn": "父母應該為孩子慎選好的節目。",
+         "clozeQuestion": "Mr. Lin wrote a ______ for his school that would help schedule classes.",
+         "clozeCn": "林先生幫他的學校寫了一個排課的程式。",
+         "clozeAnswer": "program",
+         "unit": 1
+        },
+        {
+         "word": "program",
+         "chinese": "製作節目；進行程序設定",
+         "example": "They have two full months to program a new show.",
+         "exampleCn": "他們有整整兩個月的時間可以製作新節目。",
+         "clozeQuestion": "In many industrial robot applications, the robot is ______ to do the same task.",
+         "clozeCn": "在很多工業機器人應用中，都是被編程執行相同工作的。",
+         "clozeAnswer": "program",
+         "unit": 1
+        },
+        {
+         "word": "programmer",
+         "chinese": "程式設計師",
+         "example": "My brother works as a computer programmer and spends all day writing code.",
+         "exampleCn": "我哥哥是一位電腦程式設計師，整天都在寫程式碼。",
+         "clozeQuestion": "The ________ created a new app to help students manage their study schedules more effectively.",
+         "clozeCn": "那位程式設計師開發了一個新的應用程式，來幫助學生更有效地管理讀書計畫。",
+         "clozeAnswer": "programmer",
+         "unit": 1
+        },
+        {
+         "word": "unite",
+         "chinese": "結合",
+         "example": "All the students decided to unite to clean the school playground together.",
+         "exampleCn": "所有的學生決定團結起來，一起打掃學校操場。",
+         "clozeQuestion": "People from different backgrounds must ________ to solve this global problem.",
+         "clozeCn": "來自不同背景的人必須結合起來，共同解決這個全球性的問題。",
+         "clozeAnswer": "unite",
+         "unit": 1
+        },
+        {
+         "word": "union",
+         "chinese": "聯合、工會",
+         "example": "The labor union decided to go on strike next week to ask for better pay.",
+         "exampleCn": "工會決定下週罷工，以要求更好的薪資。",
+         "clozeQuestion": "The workers held a meeting to talk about their rights with the labor ________.",
+         "clozeCn": "工人們舉行了一場會議，與工會討論他們的權利。",
+         "clozeAnswer": "union",
+         "unit": 1
+        },
+        {
+         "word": "unity",
+         "chinese": "團結",
+         "example": "The president appealed for national unity in his speech.",
+         "exampleCn": "總統在演說中呼籲全民團結。",
+         "clozeQuestion": "The coach told the players that ________ is the key to winning the championship.",
+         "clozeCn": "教練告訴球員們，團結是贏得冠軍的關鍵。",
+         "clozeAnswer": "unity",
+         "unit": 1
+        },
+        {
+         "word": "remain",
+         "chinese": "仍然、剩下",
+         "example": "The prime minister remained silent and refused to answer any questions.",
+         "exampleCn": "總理保持沉默，拒絕回答任何問題。",
+         "clozeQuestion": "If you follow the instructions, you will ________ healthy and strong.",
+         "clozeCn": "如果你遵循這些指示，你將會保持健康與強壯。",
+         "clozeAnswer": "remain",
+         "unit": 1
+        },
+        {
+         "word": "remains",
+         "chinese": "殘餘物、遺骸",
+         "example": "The scientist carefully studied the ancient remains found in the cave.",
+         "exampleCn": "科學家仔細研究了在洞穴中發現的古代遺骸。",
+         "clozeQuestion": "The police found the ________ of the fire in the middle of the room.",
+         "clozeCn": "警察在房間中央發現了火災的殘餘物。",
+         "clozeAnswer": "remains",
+         "unit": 1
+        },
+        {
+         "word": "broom",
+         "chinese": "掃把",
+         "example": "Judy prefers traditional brooms made of twigs to plastic ones.",
+         "exampleCn": "與塑膠掃帚相比，茱蒂比較喜歡傳統掃帚。",
+         "clozeQuestion": "Please pick up the ________ and sweep the floor in the kitchen.",
+         "clozeCn": "請拿起掃把，把廚房的地板掃一掃。",
+         "clozeAnswer": "broom",
+         "unit": 1
+        },
+        {
+         "word": "broomstick",
+         "chinese": "掃帚柄",
+         "example": "The little girl pretended that her broomstick was a flying horse.",
+         "exampleCn": "小女孩假裝她的掃帚柄是一匹會飛的馬。",
+         "clozeQuestion": "In many fairy tales, witches fly across the full moon on a ________.",
+         "clozeCn": "在許多童話故事中，女巫會騎著掃帚柄飛過滿月。",
+         "clozeAnswer": "broomstick",
+         "unit": 1
+        },
+        {
+         "word": "college",
+         "chinese": "大學",
+         "example": "Every student wants to go to a good college to get a better education.",
+         "exampleCn": "每位學生都想上好大學以獲得更好的教育。",
+         "clozeQuestion": "She is looking forward to starting her first year of ________ this September.",
+         "clozeCn": "她很期待今年九月開始她的大學一年級生活。",
+         "clozeAnswer": "college",
+         "unit": 1
+        },
+        {
+         "word": "situation",
+         "chinese": "情境、情況",
+         "example": "It is important for kids to learn how to deal with dangerous situations.",
+         "exampleCn": "對孩子來說，學習如何處理危險情況是很重要的。",
+         "clozeQuestion": "I found myself in a difficult ________ when I lost my wallet in a foreign country.",
+         "clozeCn": "當我在國外弄丟皮夾時，我發現自己陷入了困難的情況。",
+         "clozeAnswer": "situation",
+         "unit": 1
+        },
+        {
+         "word": "sit-com",
+         "chinese": "情境喜劇",
+         "example": "My family watches a funny sit-com together every Friday night.",
+         "exampleCn": "我的家人每個週五晚上都會一起看一部有趣的情境喜劇。",
+         "clozeQuestion": "This popular ________ has been on TV for ten years and is still very funny.",
+         "clozeCn": "這部受歡迎的情境喜劇已經在電視上播了十年，而且依然非常有趣。",
+         "clozeAnswer": "sit-com",
+         "unit": 1
+        },
+        {
+         "word": "determine",
+         "chinese": "下定決心；決定",
+         "example": "We determined to start the project immediately to finish it on time.",
+         "exampleCn": "我們決定立即開始這個專案，以便準時完成。",
+         "clozeQuestion": "I have ________ to learn a new language before the end of the year.",
+         "clozeCn": "我已經下定決心要在年底前學會一門新語言。",
+         "clozeAnswer": "determined",
+         "unit": 1
+        },
+        {
+         "word": "determined",
+         "chinese": "有決心的",
+         "example": "Kelly is a determined woman who never gives up on her dreams.",
+         "exampleCn": "凱莉是一個有決心的女人，從不放棄她的夢想。",
+         "clozeQuestion": "He is so ________ to win the race that he practices for five hours every day.",
+         "clozeCn": "他非常有決心要贏得比賽，以至於他每天練習五個小時。",
+         "clozeAnswer": "determined",
+         "unit": 1
+        },
+        {
+         "word": "condition",
+         "chinese": "狀況、條件",
+         "example": "The house is in good condition even though it was built fifty years ago.",
+         "exampleCn": "儘管這棟房子是五十年前蓋的，但目前狀況依然良好。",
+         "clozeQuestion": "Before buying a used car, you should check the ________ of the engine carefully.",
+         "clozeCn": "在購買二手車之前，你應該仔細檢查引擎的狀況。",
+         "clozeAnswer": "condition",
+         "unit": 2
+        },
+        {
+         "word": "unconditional",
+         "chinese": "無條件的",
+         "example": "Parents usually have unconditional love for their children.",
+         "exampleCn": "父母通常對他們的孩子有著無條件的愛。",
+         "clozeQuestion": "True friendship is often based on ________ support and trust.",
+         "clozeCn": "真正的友誼通常建立在無條件的支持與信任之上。",
+         "clozeAnswer": "unconditional",
+         "unit": 2
+        },
+        {
+         "word": "coconut",
+         "chinese": "椰子",
+         "example": "We enjoyed drinking fresh coconut water on the sunny beach.",
+         "exampleCn": "我們在陽光普照的海灘上享受著新鮮的椰子水。",
+         "clozeQuestion": "I love the smell of the ________ soap I bought at the market.",
+         "clozeCn": "我喜歡我在市場買的那塊椰子肥皂的味道。",
+         "clozeAnswer": "coconut",
+         "unit": 2
+        },
+        {
+         "word": "rate",
+         "chinese": "比率、評比",
+         "example": "The hotel has a high success rate because the staff is very friendly.",
+         "exampleCn": "這間飯店的成功率很高，因為服務人員非常友善。",
+         "clozeQuestion": "Please ________ the movie from one to five stars on our website.",
+         "clozeCn": "請在我們的網站上為這部電影評分（一到五顆星）。",
+         "clozeAnswer": "rate",
+         "unit": 2
+        },
+        {
+         "word": "process",
+         "chinese": "過程",
+         "example": "Learning to play the piano is a long process that requires patience.",
+         "exampleCn": "學習彈鋼琴是一個需要耐心的漫長過程。",
+         "clozeQuestion": "The whole ________ of making this cake takes about two hours.",
+         "clozeCn": "製作這個蛋糕的整個過程大約需要兩個小時。",
+         "clozeAnswer": "process",
+         "unit": 2
+        },
+        {
+         "word": "processing",
+         "chinese": "(電腦)處理",
+         "example": "Data processing is essential for modern companies to organize information.",
+         "exampleCn": "資料處理對現代公司整理資訊來說是不可或缺的。",
+         "clozeQuestion": "This software is very good at the ________ of large files quickly.",
+         "clozeCn": "這個軟體在快速處理大型檔案方面表現非常出色。",
+         "clozeAnswer": "processing",
+         "unit": 2
+        },
+        {
+         "word": "activity",
+         "chinese": "活動",
+         "example": "I enjoy doing outdoor activities like hiking and swimming in summer.",
+         "exampleCn": "我喜歡在夏天從事像健行和游泳這樣的戶外活動。",
+         "clozeQuestion": "Reading is a relaxing ________ that you can do at home.",
+         "clozeCn": "閱讀是一項你可以在家做的放鬆活動。",
+         "clozeAnswer": "activity",
+         "unit": 2
+        },
+        {
+         "word": "active",
+         "chinese": "主動的、活躍的",
+         "example": "He is an active member of the school club and always helps with events.",
+         "exampleCn": "他是學校社團的活躍成員，總是在活動中幫忙。",
+         "clozeQuestion": "Staying ________ is important for your health as you get older.",
+         "clozeCn": "隨著年齡增長，保持活躍對你的健康很重要。",
+         "clozeAnswer": "active",
+         "unit": 2
+        },
+        {
+         "word": "pressure",
+         "chinese": "壓力",
+         "example": "The deeper you go down into the sea, the more pressure you undergo.",
+         "exampleCn": "你愈深入海底，你所承受的壓力愈大。",
+         "clozeQuestion": "Many students feel a lot of ________ before their final exams.",
+         "clozeCn": "許多學生在期末考前感到很大的壓力。",
+         "clozeAnswer": "pressure",
+         "unit": 2
+        },
+        {
+         "word": "press",
+         "chinese": "擠壓、報刊",
+         "example": "I don’t think that the conflict between these countries will be reported in the press.",
+         "exampleCn": "我不認為這兩個國家的衝突會被報刊給報導出來。",
+         "clozeQuestion": "Please ________ the red button to start the machine.",
+         "clozeCn": "請按一下紅色按鈕來啟動機器。",
+         "clozeAnswer": "press",
+         "unit": 2
+        },
+        {
+         "word": "major",
+         "chinese": "主要的、主修",
+         "example": "I plan to major in math in college next year.",
+         "exampleCn": "我計畫明年在大學主修數學。",
+         "clozeQuestion": "The ________ challenge in this project is to manage our time well.",
+         "clozeCn": "這個專案的主要挑戰是妥善管理我們的時間。",
+         "clozeAnswer": "major",
+         "unit": 2
+        },
+        {
+         "word": "majority",
+         "chinese": "大多數",
+         "example": "The majority of California's immigrants are from Latin America or Asia.",
+         "exampleCn": "加州大多數的移民是來自拉丁美洲或亞洲。",
+         "clozeQuestion": "The ________ of the students in my class like to study in the library.",
+         "clozeCn": "我班上大多數的學生都喜歡在圖書館讀書。",
+         "clozeAnswer": "majority",
+         "unit": 2
+        },
+        {
+         "word": "minor",
+         "chinese": "次要的、未成年者",
+         "example": "The minor quakes after a major quake are called aftershocks.",
+         "exampleCn": "大地震後較小的地震被稱為餘震。",
+         "clozeQuestion": "He only had a ________ problem with his car, so it was fixed quickly.",
+         "clozeCn": "他的車只有一個小問題，所以很快就修好了。",
+         "clozeAnswer": "minor",
+         "unit": 2
+        },
+        {
+         "word": "minority",
+         "chinese": "少數",
+         "example": "The minority should respect the decisions of the majority.",
+         "exampleCn": "少數應該尊重多數人的決議。",
+         "clozeQuestion": "Only a small ________ of people in the city speak this ancient language.",
+         "clozeCn": "這座城市中只有少數人說這種古老的語言。",
+         "clozeAnswer": "minority",
+         "unit": 2
+        },
+        {
+         "word": "available",
+         "chinese": "可得到的、空閒的",
+         "example": "Could you please tell me when the dentist is available?",
+         "exampleCn": "請問牙醫什麼時候有空呢？",
+         "clozeQuestion": "This book is ________ in most bookstores now.",
+         "clozeCn": "這本書現在在大多數的書店都買得到。",
+         "clozeAnswer": "available",
+         "unit": 2
+        },
+        {
+         "word": "suggest",
+         "chinese": "建議",
+         "example": "It has been suggested that leather could be made from plants.",
+         "exampleCn": "有人提出皮革也許可以用植物來生產。",
+         "clozeQuestion": "I ________ that we go to the beach this weekend.",
+         "clozeCn": "我建議我們這週末去海邊。",
+         "clozeAnswer": "suggest",
+         "unit": 2
+        },
+        {
+         "word": "grin",
+         "chinese": "露齒而笑",
+         "example": "After knowing our victory, our coach grinned from ear to ear.",
+         "exampleCn": "得知我們勝利後，我們的教練開心地笑了。",
+         "clozeQuestion": "She gave me a big ________ when she heard the good news.",
+         "clozeCn": "當她聽到好消息時，對我露出了燦爛的笑容。",
+         "clozeAnswer": "grin",
+         "unit": 2
+        },
+        {
+         "word": "statue",
+         "chinese": "雕像",
+         "example": "The Statue of Liberty is a significant landmark in America.",
+         "exampleCn": "自由女神像是美國一個重要的地標。",
+         "clozeQuestion": "There is a beautiful stone ________ of a famous writer in the park.",
+         "clozeCn": "公園裡有一座著名的作家石雕像。",
+         "clozeAnswer": "statue",
+         "unit": 2
+        },
+        {
+         "word": "faint",
+         "chinese": "微弱的、昏倒",
+         "example": "John was faint with hunger and fatigue after the long hike.",
+         "exampleCn": "經過長途健行後，飢餓和疲倦使約翰變得非常虛弱。",
+         "clozeQuestion": "She felt ________ because she hadn't eaten anything all day.",
+         "clozeCn": "她感到昏昏沉沉（虛弱），因為她一整天都沒吃東西。",
+         "clozeAnswer": "faint",
+         "unit": 2
+        },
+        {
+         "word": "swell",
+         "chinese": "腫脹",
+         "example": "The nurse asked me to put an ice bag on my sprained ankle before it swelled.",
+         "exampleCn": "護士要我在扭傷的腳踝腫起來之前，放個冰袋在上面。",
+         "clozeQuestion": "If you hit your finger, it might ________ up quickly.",
+         "clozeCn": "如果你撞到手指，它可能會很快腫起來。",
+         "clozeAnswer": "swell",
+         "unit": 2
+        },
+        {
+         "word": "rocket",
+         "chinese": "火箭",
+         "example": "The rocket was launched from NASA early this morning.",
+         "exampleCn": "今天早上火箭從美國太空總署發射了。",
+         "clozeQuestion": "The ________ carried a new satellite into space.",
+         "clozeCn": "這枚火箭載著一顆新衛星進入太空。",
+         "clozeAnswer": "rocket",
+         "unit": 3
+        },
+        {
+         "word": "knight",
+         "chinese": "騎士",
+         "example": "There are a lot of legends about the knights of the Round Table.",
+         "exampleCn": "有許多關於圓桌武士的傳說。",
+         "clozeQuestion": "The brave ________ wore shining armor and protected the kingdom.",
+         "clozeCn": "那位勇敢的騎士穿著閃亮的盔甲，保護著王國。",
+         "clozeAnswer": "knight",
+         "unit": 3
+        },
+        {
+         "word": "crown",
+         "chinese": "皇冠、加冕",
+         "example": "Queen Elizabeth II was crowned in 1952.",
+         "exampleCn": "伊莉莎白女皇二世於 1952 年被加冕繼承王位。",
+         "clozeQuestion": "The king wore a heavy gold ________ on his head.",
+         "clozeCn": "國王頭上戴著一頂沉重的金皇冠。",
+         "clozeAnswer": "crown",
+         "unit": 3
+        },
+        {
+         "word": "gang",
+         "chinese": "幫派",
+         "example": "Fights among rival gangs account for the most murders in the city.",
+         "exampleCn": "敵對幫派間的鬥毆是這座城市兇殺案的主因。",
+         "clozeQuestion": "The police are trying to stop the ________ from causing trouble.",
+         "clozeCn": "警方正試圖阻止該幫派製造麻煩。",
+         "clozeAnswer": "gang",
+         "unit": 3
+        },
+        {
+         "word": "thread",
+         "chinese": "線",
+         "example": "Do you agree that silk thread is stronger than cotton thread?",
+         "exampleCn": "你同意絲線比棉線還要耐用嗎？",
+         "clozeQuestion": "I need a needle and some ________ to fix my shirt.",
+         "clozeCn": "我需要針和一些線來縫補我的襯衫。",
+         "clozeAnswer": "thread",
+         "unit": 3
+        },
+        {
+         "word": "explode",
+         "chinese": "爆炸",
+         "example": "A bomb exploded on one of the busiest streets this morning.",
+         "exampleCn": "今天早上在一條最繁忙的街道上，有顆炸彈爆炸了。",
+         "clozeQuestion": "Be careful, or the old gas tank might ________.",
+         "clozeCn": "小心點，否則那個舊瓦斯桶可能會爆炸。",
+         "clozeAnswer": "explode",
+         "unit": 3
+        },
+        {
+         "word": "horror",
+         "chinese": "恐怖",
+         "example": "Judy doesn’t know how to overcome her horror of insects.",
+         "exampleCn": "朱蒂不知道要如何克服她對昆蟲的恐懼。",
+         "clozeQuestion": "He watched the ________ movie with his eyes covered.",
+         "clozeCn": "他遮著眼睛看那部恐怖電影。",
+         "clozeAnswer": "horror",
+         "unit": 3
+        },
+        {
+         "word": "label",
+         "chinese": "標籤",
+         "example": "He put a label with his name and address on the suitcase.",
+         "exampleCn": "他把有他名字及地址的標籤貼在行李箱上。",
+         "clozeQuestion": "Please read the ________ on the bottle to see how to use the medicine.",
+         "clozeCn": "請閱讀瓶子上的標籤，看看如何服用這種藥。",
+         "clozeAnswer": "label",
+         "unit": 3
+        },
+        {
+         "word": "gap",
+         "chinese": "鴻溝、代溝",
+         "example": "Sometimes there will be a big generation gap between parents and children.",
+         "exampleCn": "有時候親子之間會有很嚴重的代溝。",
+         "clozeQuestion": "There is a wide ________ between his words and his actions.",
+         "clozeCn": "他的言行之間有很大的落差。",
+         "clozeAnswer": "gap",
+         "unit": 3
+        },
+        {
+         "word": "fountain",
+         "chinese": "噴泉、飲水機",
+         "example": "There will be placed a drinking fountain on each floor in this building.",
+         "exampleCn": "這棟大樓裡每一層樓都會放一部飲水機。",
+         "clozeQuestion": "The beautiful ________ in the park shoots water high into the air.",
+         "clozeCn": "公園裡美麗的噴泉將水射向高空。",
+         "clozeAnswer": "fountain",
+         "unit": 3
+        },
+        {
+         "word": "tap",
+         "chinese": "水龍頭、輕拍",
+         "example": "Be sure to turn off the tap securely after you use it.",
+         "exampleCn": "用完水龍頭後一定要記得關緊。",
+         "clozeQuestion": "He ________ me on the shoulder to get my attention.",
+         "clozeCn": "他輕拍我的肩膀以引起我的注意。",
+         "clozeAnswer": "tap",
+         "unit": 3
+        },
+        {
+         "word": "racial",
+         "chinese": "種族的",
+         "example": "Racial discrimination results from a lack of understanding of different cultures.",
+         "exampleCn": "種族歧視是源自於缺乏對不同文化的理解所導致的。",
+         "clozeQuestion": "The school has a strict policy against ________ discrimination.",
+         "clozeCn": "學校有一項反對種族歧視的嚴格政策。",
+         "clozeAnswer": "racial",
+         "unit": 3
+        },
+        {
+         "word": "peak",
+         "chinese": "山巔",
+         "example": "The peak of the mountain is covered with white snow all year round.",
+         "exampleCn": "山頂上終年覆蓋著白雪。",
+         "clozeQuestion": "They finally reached the ________ after climbing for six hours.",
+         "clozeCn": "爬了六個小時後，他們終於抵達了頂峰。",
+         "clozeAnswer": "peak",
+         "unit": 3
+        },
+        {
+         "word": "interrupt",
+         "chinese": "打斷",
+         "example": "A sudden call came through, interrupting our important discussion.",
+         "exampleCn": "突然有一通電話打來，打斷了我們重要的討論。",
+         "clozeQuestion": "Sorry to ________ you, but there is a phone call for you.",
+         "clozeCn": "抱歉打斷你，但有一通你的電話。",
+         "clozeAnswer": "interrupt",
+         "unit": 3
+        },
+        {
+         "word": "quarrel",
+         "chinese": "爭吵",
+         "example": "They once had a bitter quarrel over the inheritance many years ago.",
+         "exampleCn": "多年前，他們曾經為了遺產吵得很兇。",
+         "clozeQuestion": "It is not worth having a ________ with your best friend over such a small thing.",
+         "clozeCn": "為了這種小事和你最好的朋友爭吵是不值得的。",
+         "clozeAnswer": "quarrel",
+         "unit": 3
+        },
+        {
+         "word": "knit",
+         "chinese": "針織",
+         "example": "My grandmother likes to knit sweaters for everyone in the family.",
+         "exampleCn": "我奶奶喜歡幫家裡的每個人織毛衣。",
+         "clozeQuestion": "She is learning to ________ a scarf for the cold winter.",
+         "clozeCn": "她正在學習織一條圍巾來度過寒冷的冬天。",
+         "clozeAnswer": "knit",
+         "unit": 3
+        },
+        {
+         "word": "weave",
+         "chinese": "編織",
+         "example": "She was busy weaving a beautiful tapestry for her upcoming exhibition.",
+         "exampleCn": "她正忙著為即將到來的展覽編織美麗的掛毯。",
+         "clozeQuestion": "The spider knows how to ________ a complex web to catch insects.",
+         "clozeCn": "蜘蛛知道如何編織一張複雜的網來捕捉昆蟲。",
+         "clozeAnswer": "weave",
+         "unit": 3
+        },
+        {
+         "word": "cricket",
+         "chinese": "蟋蟀",
+         "example": "The cricket makes a loud sound in the grass at night.",
+         "exampleCn": "蟋蟀晚上在草叢中發出巨大的聲音。",
+         "clozeQuestion": "I heard a ________ chirping in the garden last night.",
+         "clozeCn": "我昨晚聽到一隻蟋蟀在花園裡叫。",
+         "clozeAnswer": "cricket",
+         "unit": 3
+        },
+        {
+         "word": "grasshopper",
+         "chinese": "蚱蜢",
+         "example": "“The Ant and the Grasshopper” is one of the best-known Aesop’s Fables.",
+         "exampleCn": "「螞蟻與蚱蜢」是最著名的伊索寓言之一。",
+         "clozeQuestion": "The green ________ jumped high over the flowers in the field.",
+         "clozeCn": "那隻綠色的蚱蜢在田野間越過花朵跳得很高。",
+         "clozeAnswer": "grasshopper",
+         "unit": 3
+        },
+        {
+         "word": "instead of",
+         "chinese": "替代",
+         "example": "Instead of asking for candy, the child asked for playing.",
+         "exampleCn": "這小孩沒有要糖果，而是要玩。",
+         "clozeQuestion": "We should walk to the park ________ taking a taxi.",
+         "clozeCn": "我們應該走路去公園，而不是搭計程車。",
+         "clozeAnswer": "instead of",
+         "unit": 3
+        },
+        {
+          "word": "instead",
+          "chinese": "替代(副詞)",
+          "example": "The child didn’t ask for candy. Instead, she asked for playing.",
+          "exampleCn": "這小孩沒有要糖果。取而代之，她要玩。",
+          "clozeQuestion": "I don't have enough money for a car; ________, I will buy a bicycle.",
+          "clozeCn": "我沒有足夠的錢買車；取而代之，我會買一輛腳踏車。",
+          "clozeAnswer": "instead",
+          "unit": 3
+        },
+        {
+         "word": "seek",
+         "chinese": "尋找",
+         "example": "Since graduating from college, she has been actively seeking jobs.",
+         "exampleCn": "自從大學畢業後，她很積極地尋找工作。",
+         "clozeQuestion": "If you are lost in the mountains, you should ________ help immediately.",
+         "clozeCn": "如果你在山裡迷路了，你應該立刻尋求協助。",
+         "clozeAnswer": "seek",
+         "unit": 4
+        },
+        {
+         "word": "property",
+         "chinese": "財產、特性",
+         "example": "Our gym is not responsible for any loss or damage to members’ personal property.",
+         "exampleCn": "關於會員個人財產的遺失或毀損，我們健身房並不負責。",
+         "clozeQuestion": "Mugwood has medicinal ________ that help cure some illnesses.",
+         "clozeCn": "艾草具有能治癒某些疾病的藥用特性。",
+         "clozeAnswer": "properties",
+         "unit": 4
+        },
+        {
+         "word": "opportunity",
+         "chinese": "機會",
+         "example": "Everyone here will be given an opportunity to say something on the issue.",
+         "exampleCn": "這裡的每個人都有機會針對這個議題發言。",
+         "clozeQuestion": "Studying abroad gave him a great ________ to learn a new language.",
+         "clozeCn": "出國留學給了他學習新語言的絕佳機會。",
+         "clozeAnswer": "opportunity",
+         "unit": 4
+        },
+        {
+         "word": "actually",
+         "chinese": "事實上、實際上",
+         "example": "I didn’t actually see the kid ─ I just heard her voice.",
+         "exampleCn": "我並沒有實際看見這個孩子 ─ 我只聽到她的聲音而已。",
+         "clozeQuestion": "He said he was rich, but ________ he has no money at all.",
+         "clozeCn": "他說他很富有，但實際上他根本沒錢。",
+         "clozeAnswer": "actually",
+         "unit": 4
+        },
+        {
+         "word": "actual",
+         "chinese": "實際的、真實的",
+         "example": "The actual cost of the car was much higher than I expected.",
+         "exampleCn": "這輛車的實際花費比我預期的還要高很多。",
+         "clozeQuestion": "This movie is based on an ________ event that happened in 1990.",
+         "clozeCn": "這部電影是改編自發生在1990年的真實事件。",
+         "clozeAnswer": "actual",
+         "unit": 4
+        },
+        {
+         "word": "recognize",
+         "chinese": "認得、承認",
+         "example": "I hadn’t seen her for 20 years, but I recognized her as soon as I saw her.",
+         "exampleCn": "我已經二十年沒見過她，但是我一看到她就認出來了。",
+         "clozeQuestion": "It's hard to ________ him because he is wearing a large hat and sunglasses.",
+         "clozeCn": "很難認出他，因為他戴著一頂大帽子和墨鏡。",
+         "clozeAnswer": "recognize",
+         "unit": 4
+        },
+        {
+         "word": "concern",
+         "chinese": "關於、使掛念、掛心的事物",
+         "example": "Don’t concern yourself. Sue is fine and will be back home soon.",
+         "exampleCn": "別掛心，蘇很好，而且很快就會回家了。",
+         "clozeQuestion": "Global warming is a major ________ for many people around the world.",
+         "clozeCn": "全球暖化是全球許多人關切的議題。",
+         "clozeAnswer": "concern",
+         "unit": 4
+        },
+        {
+         "word": "cupboard",
+         "chinese": "碗櫃",
+         "example": "There is some canned food in the cupboard.",
+         "exampleCn": "碗櫃裡有一些罐頭食品。",
+         "clozeQuestion": "Please put the clean plates back into the kitchen ________.",
+         "clozeCn": "請把乾淨的盤子放回廚房的碗櫃裡。",
+         "clozeAnswer": "cupboard",
+         "unit": 4
+        },
+        {
+         "word": "suppose",
+         "chinese": "假定",
+         "example": "Jane found it a lot more difficult to get a job than she supposed it would be.",
+         "exampleCn": "珍發現找工作比她預期的難上許多。",
+         "clozeQuestion": "I ________ it will rain tomorrow because the sky is very dark.",
+         "clozeCn": "我猜想明天會下雨，因為天空很暗。",
+         "clozeAnswer": "suppose",
+         "unit": 4
+        },
+        {
+         "word": "supposedly",
+         "chinese": "假定地；大概",
+         "example": "The new restaurant is supposedly the best one in town.",
+         "exampleCn": "據說這家新餐廳是鎮上最好的一家。",
+         "clozeQuestion": "He is ________ studying in his room, but I can hear music playing.",
+         "clozeCn": "他照理說應該在房間裡讀書，但我聽到音樂在響。",
+         "clozeAnswer": "supposedly",
+         "unit": 4
+        },
+        {
+         "word": "be supposed to",
+         "chinese": "應該",
+         "example": "Students are supposed to hand in their homework on time.",
+         "exampleCn": "學生應該要準時交作業。",
+         "clozeQuestion": "You ________ arrive at the airport two hours before your flight.",
+         "clozeCn": "你應該在班機起飛前兩個小時抵達機場。",
+         "clozeAnswer": "are supposed to",
+         "unit": 4
+        },
+        {
+         "word": "permit",
+         "chinese": "允許、許可證",
+         "example": "As it was a special occasion, she permitted herself a small glass of champagne.",
+         "exampleCn": "因為這是一個特別的場合，她允許自己喝一小杯香檳。",
+         "clozeQuestion": "My parents do not ________ me to stay out past midnight.",
+         "clozeCn": "我父母不允許我在外面待過午夜。",
+         "clozeAnswer": "permit",
+         "unit": 4
+        },
+        {
+         "word": "permission",
+         "chinese": "許可",
+         "example": "You must ask the creator's permission before taking photographs of the artworks.",
+         "exampleCn": "你要先請求創作者的許可才能拍照。",
+         "clozeQuestion": "The students asked for ________ to leave the classroom early.",
+         "clozeCn": "學生們請求提早離開教室的許可。",
+         "clozeAnswer": "permission",
+         "unit": 4
+        },
+        {
+         "word": "parking permit",
+         "chinese": "停車證",
+         "example": "You need to display your parking permit on the window.",
+         "exampleCn": "你需要把停車證展示在車窗上。",
+         "clozeQuestion": "Without a valid ________, your car will be towed away.",
+         "clozeCn": "如果沒有有效的停車證，你的車會被拖走。",
+         "clozeAnswer": "parking permit",
+         "unit": 4
+        },
+        {
+         "word": "volume",
+         "chinese": "容量、體積、音量、冊",
+         "example": "Could you turn the radio’s volume down, please?",
+         "exampleCn": "可以請你把收音機的音量調小嗎？",
+         "clozeQuestion": "The latest ________ of the comic book series is finally out.",
+         "clozeCn": "這套漫畫系列的最新一冊終於出版了。",
+         "clozeAnswer": "volume",
+         "unit": 4
+        },
+        {
+         "word": "indeed",
+         "chinese": "確實地；的確地",
+         "example": "The DNA tests prove that Vincent is indeed his son.",
+         "exampleCn": "經DNA測驗證實，文森確實是他的兒子。",
+         "clozeQuestion": "It was ________ a difficult day, but we finished all the tasks.",
+         "clozeCn": "那確實是非常艱難的一天，但我們完成了所有任務。",
+         "clozeAnswer": "indeed",
+         "unit": 4
+        },
+        {
+         "word": "remove",
+         "chinese": "移除",
+         "example": "Crews of cleaners came to remove the rubbish from the backyard.",
+         "exampleCn": "清潔隊員來把後院的垃圾清走。",
+         "clozeQuestion": "Please ________ your shoes before entering the living room.",
+         "clozeCn": "進入客廳前請把你的鞋子脫掉（移除）。",
+         "clozeAnswer": "remove",
+         "unit": 4
+        },
+        {
+         "word": "represent",
+         "chinese": "代表",
+         "example": "They hired a famous lawyer to represent them in court.",
+         "exampleCn": "他們聘請了一位有名的律師在法庭裡代表他們。",
+         "clozeQuestion": "The stars on the American flag ________ the fifty states.",
+         "clozeCn": "美國國旗上的星星代表五十個州。",
+         "clozeAnswer": "represent",
+         "unit": 4
+        },
+        {
+         "word": "representative",
+         "chinese": "代表(人)、具代表性的",
+         "example": "The firm has two representatives in every European city.",
+         "exampleCn": "那家公司在每個歐洲城市都有派駐兩名代表。",
+         "clozeQuestion": "We elected John to be our class ________ for the school meeting.",
+         "clozeCn": "我們選約翰作為參加學校會議的班級代表。",
+         "clozeAnswer": "representative",
+         "unit": 4
+        },
+        {
+         "word": "attitude",
+         "chinese": "態度",
+         "example": "John has a very bad attitude toward work, so he can never get promoted.",
+         "exampleCn": "約翰的工作態度很差，這就是為什麼他永遠不會被提拔。",
+         "clozeQuestion": "You should change your negative ________ if you want to make friends.",
+         "clozeCn": "如果你想交朋友，你應該改變你消極的態度。",
+         "clozeAnswer": "attitude",
+         "unit": 4
+        },
+        {
+         "word": "reduce",
+         "chinese": "減少",
+         "example": "Such a tactic can greatly reduce the cost of customer service.",
+         "exampleCn": "這樣的策略可以大幅減少客服成本。",
+         "clozeQuestion": "We need to ________ the amount of plastic waste to protect the ocean.",
+         "clozeCn": "我們需要減少塑膠垃圾的數量以保護海洋。",
+         "clozeAnswer": "reduce",
+         "unit": 5
+        },
+        {
+         "word": "strength",
+         "chinese": "力氣、優點",
+         "example": "Honesty is one of his strengths, and this is why I hire him.",
+         "exampleCn": "誠實是他的優點之一，而這也是我僱用他的原因。",
+         "clozeQuestion": "Patience is a great ________ to have when you are teaching young kids.",
+         "clozeCn": "當你教導年幼的孩子時，耐心是一項很棒的優點。",
+         "clozeAnswer": "strength",
+         "unit": 5
+        },
+        {
+         "word": "weakness",
+         "chinese": "軟弱、缺點",
+         "example": "The primary weakness that caused you to lose the game is a lack of patience.",
+         "exampleCn": "導致你輸掉比賽的主要缺點是缺乏耐心。",
+         "clozeQuestion": "During the interview, he was asked to talk about his biggest ________.",
+         "clozeCn": "在面試過程中，他被要求談論他最大的缺點。",
+         "clozeAnswer": "weakness",
+         "unit": 5
+        },
+        {
+         "word": "factor",
+         "chinese": "因素",
+         "example": "People are the basic factor in the making of a nation.",
+         "exampleCn": "人民是國家組成的基本要素。",
+         "clozeQuestion": "Price is an important ________ when I am choosing a new smartphone.",
+         "clozeCn": "當我選擇新智慧型手機時，價格是一個重要的因素。",
+         "clozeAnswer": "factor",
+         "unit": 5
+        },
+        {
+         "word": "individual",
+         "chinese": "個體、個別的",
+         "example": "Every individual has inherent legal rights which must never be taken away.",
+         "exampleCn": "每一個人都擁有與生俱來的合法權利，而這是不可被剝奪的。",
+         "clozeQuestion": "Each ________ table in the restaurant has a different design.",
+         "clozeCn": "餐廳裡的每一張個別的桌子都有不同的設計。",
+         "clozeAnswer": "individual",
+         "unit": 5
+        },
+        {
+         "word": "individually",
+         "chinese": "個別地",
+         "example": "The bridegroom and bride thanked all the guests individually.",
+         "exampleCn": "新郎與新娘個別地向所有的客人致謝。",
+         "clozeQuestion": "The teacher spent time speaking to the students ________ after class.",
+         "clozeCn": "老師在下課後花時間個別與學生們交談。",
+         "clozeAnswer": "individually",
+         "unit": 5
+        },
+        {
+         "word": "diligent",
+         "chinese": "勤勉的",
+         "example": "Larissa is a diligent student who strives to do her best.",
+         "exampleCn": "拉瑞莎是一位總努力做到最好的勤奮學生。",
+         "clozeQuestion": "He is a ________ worker and never misses any project deadlines.",
+         "clozeCn": "他是一位勤奮的員工，從不拖延任何專案的期限。",
+         "clozeAnswer": "diligent",
+         "unit": 5
+        },
+        {
+         "word": "fax",
+         "chinese": "傳真",
+         "example": "John promises to send you a fax with the details of the project.",
+         "exampleCn": "約翰承諾會將項目的細節傳真給你。",
+         "clozeQuestion": "Could you ________ this important document to my office right away?",
+         "clozeCn": "你可以立刻把這份重要文件傳真到我的辦公室嗎？",
+         "clozeAnswer": "fax",
+         "unit": 5
+        },
+        {
+         "word": "product",
+         "chinese": "產品",
+         "example": "We should buy local farm products instead of imported ones.",
+         "exampleCn": "我們應該買本土產品，而非進口產品。",
+         "clozeQuestion": "This company makes a new software ________ for editing videos.",
+         "clozeCn": "這家公司製作了一款用於剪輯影片的新軟體產品。",
+         "clozeAnswer": "product",
+         "unit": 5
+        },
+        {
+         "word": "produce",
+         "chinese": "農產品",
+         "example": "The local market is famous for selling fresh, organic produce.",
+         "exampleCn": "這個當地市場以販售新鮮的有機農產品而聞名。",
+         "clozeQuestion": "We bought some fresh ________ like apples and carrots at the farm.",
+         "clozeCn": "我們在農場買了一些像蘋果和胡蘿蔔的新鮮農產品。",
+         "clozeAnswer": "produce",
+         "unit": 5
+        },
+        {
+         "word": "by-product",
+         "chinese": "副產品",
+         "example": "Molasses is a sweet by-product of making sugar.",
+         "exampleCn": "糖蜜是製糖過程中的一種甜味副產品。",
+         "clozeQuestion": "Stress is often an unavoidable ________ of modern city life.",
+         "clozeCn": "壓力通常是現代城市生活不可避免的副產品。",
+         "clozeAnswer": "by-product",
+         "unit": 5
+        },
+        {
+         "word": "image",
+         "chinese": "影像、形象、意象",
+         "example": "I have an image in my mind of how I want the garden to be.",
+         "exampleCn": "在我心中有一個我想要的花園的樣子。",
+         "clozeQuestion": "The company is trying hard to improve its public ________ after the scandal.",
+         "clozeCn": "醜聞過後，這家公司正努力改善其公眾形象。",
+         "clozeAnswer": "image",
+         "unit": 5
+        },
+        {
+         "word": "self-image",
+         "chinese": "自我形象",
+         "example": "Exercise can help build a healthy self-image and boost confidence.",
+         "exampleCn": "運動有助於建立健康的自我形象並提升自信。",
+         "clozeQuestion": "Having a positive ________ is important for a teenager's mental health.",
+         "clozeCn": "擁有積極的自我形象對青少年的心理健康很重要。",
+         "clozeAnswer": "self-image",
+         "unit": 5
+        },
+        {
+         "word": "imagine",
+         "chinese": "想像",
+         "example": "I can hardly imagine what my life would be like without my family.",
+         "exampleCn": "我幾乎無法想像如果沒有家人，我的生活會變成什麼樣子。",
+         "clozeQuestion": "Can you ________ living on a planet without any water?",
+         "clozeCn": "你能想像住在一個完全沒有水的星球上嗎？",
+         "clozeAnswer": "imagine",
+         "unit": 5
+        },
+        {
+         "word": "imagination",
+         "chinese": "想像力",
+         "example": "In the art class, the teacher asked all the students to use their imagination.",
+         "exampleCn": "在美術課裡，老師要學生們用想像力畫畫。",
+         "clozeQuestion": "Reading fantasy novels is a great way to develop your ________.",
+         "clozeCn": "閱讀奇幻小說是培養想像力的好方法。",
+         "clozeAnswer": "imagination",
+         "unit": 5
+        },
+        {
+         "word": "prevent",
+         "chinese": "預防",
+         "example": "You should apply some ointment to prevent the wound from becoming infected.",
+         "exampleCn": "你應該塗些藥膏以防止傷口感染。",
+         "clozeQuestion": "Wearing a seatbelt can ________ serious injuries in a car accident.",
+         "clozeCn": "繫安全帶可以預防在車禍中受到嚴重的傷害。",
+         "clozeAnswer": "prevent",
+         "unit": 5
+        },
+        {
+         "word": "medical",
+         "chinese": "醫學的",
+         "example": "Many parents want their kid to attend medical school to become a doctor.",
+         "exampleCn": "許多家長希望他們的小孩去讀醫學系成為醫生。",
+         "clozeQuestion": "He needs immediate ________ attention because he is breathing heavily.",
+         "clozeCn": "他需要立即的醫療協助，因為他呼吸急促。",
+         "clozeAnswer": "medical",
+         "unit": 5
+        },
+        {
+         "word": "medicine",
+         "chinese": "藥、醫學",
+         "example": "The doctor gave me some medicine to help cure my bad cold.",
+         "exampleCn": "醫生開了一些藥來幫助治癒我的重感冒。",
+         "clozeQuestion": "Did you remember to take your ________ after eating breakfast?",
+         "clozeCn": "你記得吃完早餐後要吃藥嗎？",
+         "clozeAnswer": "medicine",
+         "unit": 5
+        },
+        {
+         "word": "mention",
+         "chinese": "提及",
+         "example": "She has mastered advanced math, not to mention basic math.",
+         "exampleCn": "她已精通高等數學，更別說初等數學了。",
+         "clozeQuestion": "Did he ________ where he was going for his summer vacation?",
+         "clozeCn": "他有提到他暑假要去哪裡嗎？",
+         "clozeAnswer": "mention",
+         "unit": 5
+        },
+        {
+         "word": "detail",
+         "chinese": "細節",
+         "example": "Can you prepare a report detailing how much we’ve spent on the project?",
+         "exampleCn": "可以請你寫一份報告詳述我們在計畫上花了多少錢嗎？",
+         "clozeQuestion": "Could you please give me one more ________ about your new plan?",
+         "clozeCn": "可以請你再給我一個關於你新計畫的細節嗎？",
+         "clozeAnswer": "detail",
+         "unit": 5
+        },
+        {
+         "word": "detailed",
+         "chinese": "詳細的",
+         "example": "Because the victim gave a detailed description, the police could capture the suspect.",
+         "exampleCn": "因為被害人提供了詳細的描述，警方才能逮到嫌犯。",
+         "clozeQuestion": "The travel guide includes a ________ map of the city center.",
+         "clozeCn": "這本旅遊指南包含了一張市中心的詳細地圖。",
+         "clozeAnswer": "detailed",
+         "unit": 6
+        },
+        {
+         "word": "account",
+         "chinese": "帳戶、說明原因",
+         "example": "Breast cancer accounted for 20% of cancer deaths among women.",
+         "exampleCn": "因癌症死亡的女性當中有百分之二十是罹患乳癌。",
+         "clozeQuestion": "I went to the bank to open a new savings ________.",
+         "clozeCn": "我去銀行開了一個新的儲蓄帳戶。",
+         "clozeAnswer": "account",
+         "unit": 6
+        },
+        {
+         "word": "technique",
+         "chinese": "技巧、技術",
+         "example": "The athlete uses a special breathing technique to calm down before the race.",
+         "exampleCn": "這位運動員在賽前使用一種特殊的呼吸技巧來讓自己冷靜。",
+         "clozeQuestion": "He has a great ________ for playing the piano quickly.",
+         "clozeCn": "他有一套快速彈奏鋼琴的好技巧。",
+         "clozeAnswer": "technique",
+         "unit": 6
+        },
+        {
+         "word": "technical",
+         "chinese": "技術的、專業的",
+         "example": "I need some technical suggestions from the counselor to fix the machine.",
+         "exampleCn": "我需要顧問的一些技術性建議來修理機器。",
+         "clozeQuestion": "The website is down right now due to a ________ problem.",
+         "clozeCn": "由於技術問題，該網站目前無法運作。",
+         "clozeAnswer": "technical",
+         "unit": 6
+        },
+        {
+         "word": "technology",
+         "chinese": "科技",
+         "example": "The robot is a product of cutting-edge technology.",
+         "exampleCn": "這台機器人是尖端科技的產物。",
+         "clozeQuestion": "Modern ________ makes it easy to communicate with people across the world.",
+         "clozeCn": "現代科技讓人們能輕鬆地與世界各地的人交流。",
+         "clozeAnswer": "technology",
+         "unit": 6
+        },
+        {
+         "word": "normal",
+         "chinese": "正常的",
+         "example": "It is completely normal to feel a bit tired after a long trip.",
+         "exampleCn": "在長途旅行後感到有點疲倦是完全正常的。",
+         "clozeQuestion": "The doctor checked my heartbeat and said it was perfectly ________.",
+         "clozeCn": "醫生檢查了我的心跳，說它非常正常。",
+         "clozeAnswer": "normal",
+         "unit": 6
+        },
+        {
+         "word": "normally",
+         "chinese": "正常地、通常地",
+         "example": "Normally, Judy drives to work, but today she took a train.",
+         "exampleCn": "通常茱蒂會開車上班，但今天她卻搭火車。",
+         "clozeQuestion": "I ________ wake up at 7 AM, but today I slept until 9 AM.",
+         "clozeCn": "我通常早上七點起床，但今天我睡到九點。",
+         "clozeAnswer": "normally",
+         "unit": 6
+        },
+        {
+         "word": "enjoy",
+         "chinese": "享受",
+         "example": "I really enjoy watching movies with my friends on weekends.",
+         "exampleCn": "我真的很享受週末和朋友一起看電影。",
+         "clozeQuestion": "Did you ________ the delicious food at the party last night?",
+         "clozeCn": "你享受昨晚派對上的美味食物嗎？",
+         "clozeAnswer": "enjoy",
+         "unit": 6
+        },
+        {
+         "word": "enjoyable",
+         "chinese": "令人愉快的",
+         "example": "It looks like you had an enjoyable vacation in Singapore.",
+         "exampleCn": "看來你在新加坡度過了個相當愉快的假期。",
+         "clozeQuestion": "The music made the evening very relaxing and ________.",
+         "clozeCn": "音樂讓這個夜晚變得非常放鬆且令人愉快。",
+         "clozeAnswer": "enjoyable",
+         "unit": 6
+        },
+        {
+         "word": "enjoyment",
+         "chinese": "享受；快樂",
+         "example": "He reads novels purely for his own enjoyment.",
+         "exampleCn": "他讀小說純粹是為了自己的樂趣。",
+         "clozeQuestion": "Playing sports outdoors brings me great ________ and health.",
+         "clozeCn": "在戶外做運動帶給我極大的快樂和健康。",
+         "clozeAnswer": "enjoyment",
+         "unit": 6
+        },
+        {
+         "word": "committee",
+         "chinese": "委員(會)",
+         "example": "She is one of the members of the school's development committee.",
+         "exampleCn": "她是學校發展委員會的一員。",
+         "clozeQuestion": "The local ________ decided to plant more trees in the park.",
+         "clozeCn": "當地委員會決定在公園裡種更多樹。",
+         "clozeAnswer": "committee",
+         "unit": 6
+        },
+        {
+         "word": "achieve",
+         "chinese": "達成",
+         "example": "If you study hard, you can achieve your dream of becoming a teacher.",
+         "exampleCn": "如果你努力學習，你就能達成成為老師的夢想。",
+         "clozeQuestion": "The team worked together to ________ a great victory.",
+         "clozeCn": "團隊合作達成了一場偉大的勝利。",
+         "clozeAnswer": "achieve",
+         "unit": 6
+        },
+        {
+         "word": "achievement",
+         "chinese": "成就",
+         "example": "It will give you a sense of achievement if you actually make it to the end.",
+         "exampleCn": "你會得到成就感，如果你真的將它完成的話。",
+         "clozeQuestion": "Winning the national competition was a huge ________ for the young artist.",
+         "clozeCn": "贏得全國比賽對這位年輕藝術家來說是一項巨大的成就。",
+         "clozeAnswer": "achievement",
+         "unit": 6
+        },
+        {
+         "word": "observe",
+         "chinese": "遵守、觀察",
+         "example": "Every individual must observe the law. Nobody should be an exception.",
+         "exampleCn": "所有人都要遵守法律，沒有人可以例外。",
+         "clozeQuestion": "The science teacher told the students to ________ the stars through a telescope.",
+         "clozeCn": "自然老師告訴學生們透過望遠鏡觀察星星。",
+         "clozeAnswer": "observe",
+         "unit": 6
+        },
+        {
+         "word": "religion",
+         "chinese": "宗教",
+         "example": "Christianity, Islam and Buddhism are the major religions of the world.",
+         "exampleCn": "基督教、回教和佛教是世界上的主要宗教。",
+         "clozeQuestion": "They are learning about the history of an ancient ________ in class.",
+         "clozeCn": "他們正在課堂上學習一個古老宗教的歷史。",
+         "clozeAnswer": "religion",
+         "unit": 6
+        },
+        {
+         "word": "religious",
+         "chinese": "宗教的、虔誠的",
+         "example": "He is a very religious person and goes to the temple every week.",
+         "exampleCn": "他是一個非常虔誠的人，每個星期都去寺廟。",
+         "clozeQuestion": "The people in the village celebrate many traditional ________ holidays.",
+         "clozeCn": "村裡的人們慶祝許多傳統的宗教節日。",
+         "clozeAnswer": "religious",
+         "unit": 6
+        },
+        {
+         "word": "fund",
+         "chinese": "基金、為…籌措資金",
+         "example": "The school set up a special fund to buy new computers for the library.",
+         "exampleCn": "學校設立了一個特別基金來為圖書館購買新電腦。",
+         "clozeQuestion": "They organized a concert to help ________ the building of a new hospital.",
+         "clozeCn": "他們舉辦了一場音樂會來幫助資助新醫院的建設。",
+         "clozeAnswer": "fund",
+         "unit": 6
+        },
+        {
+         "word": "funding",
+         "chinese": "經費補助",
+         "example": "The new director lacks knowledge of securing funding for her film.",
+         "exampleCn": "這位新導演不知該如何為她的新電影籌措經費。",
+         "clozeQuestion": "The scientific project had to stop because it lost its government ________.",
+         "clozeCn": "這個科學計畫不得不停止，因為它失去了政府的經費補助。",
+         "clozeAnswer": "funding",
+         "unit": 6
+        },
+        {
+         "word": "audience",
+         "chinese": "觀眾",
+         "example": "The audience applauded enthusiastically at the end of the play.",
+         "exampleCn": "觀眾在劇終時熱烈鼓掌。",
+         "clozeQuestion": "The speaker told a funny joke that made the whole ________ laugh.",
+         "clozeCn": "演講者講了一個有趣的笑話，讓全場觀眾大笑。",
+         "clozeAnswer": "audience",
+         "unit": 6
+        },
+        {
+         "word": "vary",
+         "chinese": "使有變化",
+         "example": "The prices of the hotel rooms vary depending on the season.",
+         "exampleCn": "飯店房間的價格會因季節而有所不同（變化）。",
+         "clozeQuestion": "Teachers should ________ their teaching methods to help all students learn.",
+         "clozeCn": "老師應該改變（使有變化）他們的教學方法以幫助所有學生學習。",
+         "clozeAnswer": "vary",
+         "unit": 6
+        },
+        {
+         "word": "variety",
+         "chinese": "多樣性、變化",
+         "example": "When preparing meals, you need to take variety into consideration.",
+         "exampleCn": "準備三餐時，你必須要考慮食物的多樣性。",
+         "clozeQuestion": "This new supermarket sells a wide ________ of fresh vegetables and fruits.",
+         "clozeCn": "這家新超市販售種類繁多的新鮮蔬菜和水果。",
+         "clozeAnswer": "variety",
+         "unit": 7
+        },
+        {
+         "word": "various",
+         "chinese": "各式各樣的",
+         "example": "The suspect made up various reasons to avoid being sentenced.",
+         "exampleCn": "為了避免被判刑，這名嫌犯編造各種理由。",
+         "clozeQuestion": "There are ________ ways to solve this difficult math problem.",
+         "clozeCn": "有各式各樣的方法可以解決這個困難的數學問題。",
+         "clozeAnswer": "various",
+         "unit": 7
+        }               
+      ]    
+    }    
+  }    
+  }
