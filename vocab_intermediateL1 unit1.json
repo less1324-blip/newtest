@@ -610,7 +610,7 @@
           "clozeQuestion": "I don't have enough money for a car; ________, I will buy a bicycle.",
           "clozeCn": "我沒有足夠的錢買車；取而代之，我會買一輛腳踏車。",
           "clozeAnswer": "instead",
-          "unit": 3
+          "unit": 4
         },
         {
          "word": "seek",
@@ -810,7 +810,7 @@
          "clozeQuestion": "You should change your negative ________ if you want to make friends.",
          "clozeCn": "如果你想交朋友，你應該改變你消極的態度。",
          "clozeAnswer": "attitude",
-         "unit": 4
+         "unit": 5
         },
         {
          "word": "reduce",
@@ -1010,7 +1010,7 @@
          "clozeQuestion": "Could you please give me one more ________ about your new plan?",
          "clozeCn": "可以請你再給我一個關於你新計畫的細節嗎？",
          "clozeAnswer": "detail",
-         "unit": 5
+         "unit": 6
         },
         {
          "word": "detailed",
@@ -1210,7 +1210,7 @@
          "clozeQuestion": "Teachers should ________ their teaching methods to help all students learn.",
          "clozeCn": "老師應該改變（使有變化）他們的教學方法以幫助所有學生學習。",
          "clozeAnswer": "vary",
-         "unit": 6
+         "unit": 7
         },
         {
          "word": "variety",
@@ -1240,7 +1240,7 @@
          "clozeQuestion": "Parents often tell short ________ to teach their children good moral values.",
          "clozeCn": "父母常講簡短的寓言故事來教導孩子良好的道德價值觀。",
          "clozeAnswer": "fables",
-         "unit": 8
+         "unit": 7
         },
         {
         "word": "industrial",
@@ -1250,7 +1250,7 @@
         "clozeQuestion": "The ________ area of the town is full of large factories and warehouses.",
         "clozeCn": "這個鎮的工業區充滿了大型工廠和倉庫。",
         "clozeAnswer": "industrial",
-        "unit": 8
+        "unit": 7
         },
         {
         "word": "industry",
@@ -1260,7 +1260,7 @@
         "clozeQuestion": "My uncle works in the automobile ________ and helps design new cars.",
         "clozeCn": "我叔叔在汽車工業工作，協助設計新車。",
         "clozeAnswer": "industry",
-        "unit": 8
+        "unit": 7
         },
         {
         "word": "moral",
@@ -1270,7 +1270,7 @@
         "clozeQuestion": "He is a highly ________ person who always tries to do the right thing.",
         "clozeCn": "他是一個極具道德感的人，總是試圖做正確的事。",
         "clozeAnswer": "moral",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "immoral",
@@ -1280,7 +1280,7 @@
         "clozeQuestion": "Stealing money from the poor is considered highly ________ by society.",
         "clozeCn": "從窮人那裡偷錢被社會認為是非常不道德的。",
         "clozeAnswer": "immoral",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "announce",
@@ -1290,7 +1290,7 @@
         "clozeQuestion": "The principal is going to ________ some important news during the morning assembly.",
         "clozeCn": "校長要在早會時宣布一些重要消息。",
         "clozeAnswer": "announce",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "announcement",
@@ -1300,7 +1300,7 @@
         "clozeQuestion": "Please listen carefully to the public ________ about the train schedule change.",
         "clozeCn": "請仔細聆聽關於火車時刻表變更的公開廣播（通告）。",
         "clozeAnswer": "announcement",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "theory",
@@ -1310,7 +1310,7 @@
         "clozeQuestion": "Einstein's ________ of relativity changed the way we understand space and time.",
         "clozeCn": "愛因斯坦的相對論改變了我們理解時空的方式。",
         "clozeAnswer": "theory",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "relate",
@@ -1320,7 +1320,7 @@
         "clozeQuestion": "Scholars believe that poor learning performance is often ________ to lack of sleep.",
         "clozeCn": "學者認為學習表現不佳通常與睡眠不足有關聯。",
         "clozeAnswer": "related",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "relation",
@@ -1330,7 +1330,7 @@
         "clozeQuestion": "Our company has built a good business ________ with many foreign partners.",
         "clozeCn": "我們公司與許多外國合作夥伴建立良好的商業關係。",
         "clozeAnswer": "relation",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "latter",
@@ -1340,7 +1340,7 @@
         "clozeQuestion": "She offered me black tea or hot coffee, and I happily chose the ________.",
         "clozeCn": "她提供我紅茶或熱咖啡，而我開心地選擇了後者。",
         "clozeAnswer": "latter",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "structure",
@@ -1350,7 +1350,7 @@
         "clozeQuestion": "The physical ________ of the human eye is very complex and amazing.",
         "clozeCn": "人類眼睛的物理結構非常複雜且驚人。",
         "clozeAnswer": "structure",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "staff",
@@ -1360,7 +1360,7 @@
         "clozeQuestion": "The hotel ________ is very friendly and always ready to assist the guests.",
         "clozeCn": "這家飯店的員工非常友善，隨時準備好協助客人。",
         "clozeAnswer": "staff",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "crew",
@@ -1370,7 +1370,7 @@
         "clozeQuestion": "The flight ________ asked all passengers to fasten their seat belts before landing.",
         "clozeCn": "機組人員請所有乘客在降落前繫好安全帶。",
         "clozeAnswer": "crew",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "suffer",
@@ -1380,7 +1380,7 @@
         "clozeQuestion": "He has to ________ many failures before finally achieving his great success.",
         "clozeCn": "在最終獲得巨大成功之前，他必須遭受許多失敗。",
         "clozeAnswer": "suffer",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "suffering",
@@ -1390,7 +1390,7 @@
         "clozeQuestion": "Modern medicine can help reduce the patient's ________ after a major surgery.",
         "clozeCn": "現代醫學可以幫助減輕病患在重大手術後的痛苦。",
         "clozeAnswer": "suffering",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "feature",
@@ -1400,7 +1400,7 @@
         "clozeQuestion": "The new smartphone has a special security ________ that uses facial recognition.",
         "clozeCn": "這款新智慧型手機有一個使用臉部辨識的特殊安全功能（特徵）。",
         "clozeAnswer": "feature",
-        "unit": 8
+        "unit": 7
       },
       {
         "word": "unless",
@@ -1440,7 +1440,7 @@
         "clozeQuestion": "The library books are ________ next Monday, so please remember to return them.",
         "clozeCn": "圖書館的書下週一到期，所以請記得歸還。",
         "clozeAnswer": "due",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "approach",
@@ -1450,7 +1450,7 @@
         "clozeQuestion": "We need to find a new ________ to solve this difficult mathematical problem.",
         "clozeCn": "我們需要找一個新方法來解決這個困難的數學問題。",
         "clozeAnswer": "approach",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "somewhat",
@@ -1460,7 +1460,7 @@
         "clozeQuestion": "I felt ________ nervous before the big job interview officially began.",
         "clozeCn": "在大型求職面試正式開始前，我感到有點緊張。",
         "clozeAnswer": "somewhat",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "hourly",
@@ -1470,7 +1470,7 @@
         "clozeQuestion": "The part-time workers receive an ________ wage of fifteen dollars.",
         "clozeCn": "兼職工人們領取十五元的每小時工資。",
         "clozeAnswer": "hourly",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "additional",
@@ -1480,7 +1480,7 @@
         "clozeQuestion": "If you need any ________ information, please visit our official website.",
         "clozeCn": "如果您需要任何額外的資訊，請造訪我們的官方網站。",
         "clozeAnswer": "additional",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "obvious",
@@ -1490,7 +1490,7 @@
         "clozeQuestion": "There is an ________ spelling mistake in your report that needs to be fixed.",
         "clozeCn": "你的報告裡有一個明顯的拼寫錯誤需要修正。",
         "clozeAnswer": "obvious",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "obviously",
@@ -1500,7 +1500,7 @@
         "clozeQuestion": "She was ________ disappointed when she heard the bad news about the trip.",
         "clozeCn": "當她聽到關於旅行的壞消息時，她明顯地感到失望。",
         "clozeAnswer": "obviously",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "advantage",
@@ -1510,7 +1510,7 @@
         "clozeQuestion": "He takes full ________ of the careless mistakes made by his competitors.",
         "clozeCn": "他充分利用競爭對手所犯的粗心失誤。",
         "clozeAnswer": "advantage",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "specific",
@@ -1520,7 +1520,7 @@
         "clozeQuestion": "Could you be more ________ about what kind of gift you want for your birthday?",
         "clozeCn": "你能更明確地說出你生日想要什麼樣的禮物嗎？",
         "clozeAnswer": "specific",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "specifically",
@@ -1530,7 +1530,7 @@
         "clozeQuestion": "I bought this chocolate cake ________ for your graduation party.",
         "clozeCn": "我特別為你的畢業派對買了這個巧克力蛋糕。",
         "clozeAnswer": "specifically",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "destroy",
@@ -1540,7 +1540,7 @@
         "clozeQuestion": "The strong earthquake threatened to ________ many old buildings in the city.",
         "clozeCn": "強烈地震威脅要摧毀城市裡的許多老舊建築。",
         "clozeAnswer": "destroy",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "tend",
@@ -1550,7 +1550,7 @@
         "clozeQuestion": "Sofia stayed in the bedroom ________ to her sick son all night.",
         "clozeCn": "蘇菲亞整晚待在臥室裡照顧他生病的兒子。",
         "clozeAnswer": "tending",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "column",
@@ -1560,7 +1560,7 @@
         "clozeQuestion": "The big colorful ________ are the most famous features of this ancient temple.",
         "clozeCn": "彩色的大柱子是這座古老寺廟最著名的特色。",
         "clozeAnswer": "columns",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "temperature",
@@ -1570,7 +1570,7 @@
         "clozeQuestion": "The ________ drops quickly when the sun goes down in the desert.",
         "clozeCn": "在沙漠中，太陽下山時溫度會快速下降。",
         "clozeAnswer": "temperature",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "mission",
@@ -1580,7 +1580,7 @@
         "clozeQuestion": "The astronauts successfully completed their secret ________ to fix the space station.",
         "clozeCn": "太空人們成功完成了他們修復太空站的秘密任務。",
         "clozeAnswer": "mission",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "reveal",
@@ -1590,7 +1590,7 @@
         "clozeQuestion": "The magician refused to ________ the secret behind his amazing card trick.",
         "clozeCn": "魔術師拒絕透露他驚人紙牌魔術背後的秘密。",
         "clozeAnswer": "reveal",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "chapter",
@@ -1600,7 +1600,7 @@
         "clozeQuestion": "In the final ________ of the novel, the brave hero finally defeats the monster.",
         "clozeCn": "在這本小說的最後一個章節裡，勇敢的英雄終於打敗了怪物。",
         "clozeAnswer": "chapter",
-        "unit": 9
+        "unit": 8
       },
       {
         "word": "proper",
@@ -1640,7 +1640,7 @@
         "clozeQuestion": "Problems like poverty and hunger still ________ in many parts of the world today.",
         "clozeCn": "像貧窮和飢餓這樣的問題，至今仍然存在於世界上許多地方。",
         "clozeAnswer": "exist",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "admit",
@@ -1650,7 +1650,7 @@
         "clozeQuestion": "The boy finally had to ________ that he was the one who broke the window.",
         "clozeCn": "男孩最後只好承認他就是打破窗戶的人。",
         "clozeAnswer": "admit",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "affect",
@@ -1660,7 +1660,7 @@
         "clozeQuestion": "The bad weather will definitely ________ our plans for the outdoor picnic.",
         "clozeCn": "糟糕的天氣絕對會影響我們戶外野餐的計畫。",
         "clozeAnswer": "affect",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "effect",
@@ -1670,7 +1670,7 @@
         "clozeQuestion": "The new medicine has a very quick ________ on curing terrible headaches.",
         "clozeCn": "這款新藥在治療嚴重頭痛方面有非常快速的效果。",
         "clozeAnswer": "effect",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "security",
@@ -1680,7 +1680,7 @@
         "clozeQuestion": "The airport has tight ________ to protect all the passengers.",
         "clozeCn": "這座機場有嚴格的安全措施以保護所有乘客。",
         "clozeAnswer": "security",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "considerable",
@@ -1690,7 +1690,7 @@
         "clozeQuestion": "He spent a ________ amount of time fixing his old car.",
         "clozeCn": "他花了相當多的時間修理他的舊車。",
         "clozeAnswer": "considerable",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "considerably",
@@ -1700,7 +1700,7 @@
         "clozeQuestion": "The weather has cooled down ________ since yesterday.",
         "clozeCn": "自昨天以來，天氣已經大幅變涼了。",
         "clozeAnswer": "considerably",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "consider",
@@ -1710,7 +1710,7 @@
         "clozeQuestion": "You should ________ all your options carefully before making a final decision.",
         "clozeCn": "在做出最終決定之前，你應該仔細考慮所有的選項。",
         "clozeAnswer": "consider",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "replace",
@@ -1720,7 +1720,7 @@
         "clozeQuestion": "I need to go to the store to ________ the old batteries in the remote control.",
         "clozeCn": "我需要去商店更換（取代）遙控器裡的舊電池。",
         "clozeAnswer": "replace",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "replacement",
@@ -1730,7 +1730,7 @@
         "clozeQuestion": "The manager is looking for a ________ for the worker who just quit.",
         "clozeCn": "經理正在為剛辭職的員工尋找替代人選。",
         "clozeAnswer": "replacement",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "hush",
@@ -1740,7 +1740,7 @@
         "clozeQuestion": "The mother gently tried to ________ the crying baby to sleep.",
         "clozeCn": "母親溫柔地試圖讓哭泣的嬰兒安靜入睡。",
         "clozeAnswer": "hush",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "collection",
@@ -1750,7 +1750,7 @@
         "clozeQuestion": "He has a large ________ of old stamps from around the world.",
         "clozeCn": "他擁有大量來自世界各地的舊郵票收藏。",
         "clozeAnswer": "collection",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "collect",
@@ -1760,7 +1760,7 @@
         "clozeQuestion": "The school will ________ old clothes and toys for the poor next week.",
         "clozeCn": "學校下週將為窮人收集舊衣服和玩具。",
         "clozeAnswer": "collect",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "inform",
@@ -1770,7 +1770,7 @@
         "clozeQuestion": "The hospital will ________ you of your blood test results tomorrow morning.",
         "clozeCn": "醫院明天早上會通知你驗血的結果。",
         "clozeAnswer": "inform",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "immediate",
@@ -1780,7 +1780,7 @@
         "clozeQuestion": "The severely injured patient needs ________ medical attention.",
         "clozeCn": "這名重傷的病患需要立刻的醫療處置。",
         "clozeAnswer": "immediate",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "immediately",
@@ -1790,7 +1790,7 @@
         "clozeQuestion": "You must leave the building ________ when you hear the fire alarm.",
         "clozeCn": "當你聽到火災警報時，必須立刻離開這棟建築物。",
         "clozeAnswer": "immediately",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "election",
@@ -1800,7 +1800,7 @@
         "clozeQuestion": "The popular president won the national ________ by a large number of votes.",
         "clozeCn": "這位受歡迎的總統以大量選票贏得了全國大選（選舉）。",
         "clozeAnswer": "election",
-        "unit": 10
+        "unit": 9
       },
       {
         "word": "elect",
@@ -1871,8 +1871,150 @@
         "clozeCn": "只要車禍中無人傷亡，這個車禍就屬於民事案件。",
         "clozeAnswer": "civil",
         "unit": 10
-      }                
-    ]    
-  }    
-}    
+      },
+      {
+        "word": "citizen",
+        "chinese": "公民",
+        "example": "Every citizen has the right to vote in a democratic country.",
+        "exampleCn": "在一個民主國家中，每個公民都有投票權。",
+        "clozeQuestion": "She became a proud American ________ after living there for ten years.",
+        "clozeCn": "在那裡住了十年後，她成為了一名驕傲的美國公民。",
+        "clozeAnswer": "citizen",
+        "unit": 10
+      },
+      {
+        "word": "perform",
+        "chinese": "表演、進行",
+        "example": "When will the heart operation be performed by the doctor?",
+        "exampleCn": "醫生何時要進行這場心臟手術？",
+        "clozeQuestion": "The famous singer will ________ her new song on television tonight.",
+        "clozeCn": "這位著名的歌手今晚將在電視上表演她的新歌。",
+        "clozeAnswer": "perform",
+        "unit": 10
+      },
+      {
+        "word": "performance",
+        "chinese": "表演、表現",
+        "example": "The actor gave a wonderful performance in the stage play.",
+        "exampleCn": "這位演員在舞台劇中呈現了精彩的表演。",
+        "clozeQuestion": "The boss praised her for her excellent ________ at work this month.",
+        "clozeCn": "老闆稱讚她這個月在工作上的優異表現。",
+        "clozeAnswer": "performance",
+        "unit": 10
+      },
+      {
+        "word": "expression",
+        "chinese": "表達、表情",
+        "example": "He had a very sad expression on his face when he heard the bad news.",
+        "exampleCn": "當他聽到這個壞消息時，臉上露出了非常悲傷的表情。",
+        "clozeQuestion": "Sending beautiful flowers is a good ________ of love and care.",
+        "clozeCn": "送美麗的花朵是愛與關懷的一種很好的表達方式。",
+        "clozeAnswer": "expression",
+        "unit": 10
+      },
+      {
+        "word": "expressive",
+        "chinese": "意味深長的、善於表達的",
+        "example": "She gave me an expressive smile when she left the room.",
+        "exampleCn": "她離開房間時，給了我一個意味深長的微笑。",
+        "clozeQuestion": "His large eyes are very ________ and show exactly how he feels.",
+        "clozeCn": "他的大眼睛非常善於表達，能精確展現出他的感受。",
+        "clozeAnswer": "expressive",
+        "unit": 10
+      },
+      {
+        "word": "governor",
+        "chinese": "州長、行政長官",
+        "example": "He was once the governor of Taiwan a long time ago.",
+        "exampleCn": "很久以前，他曾經是台灣的行政長官。",
+        "clozeQuestion": "The ________ of California gave a speech about improving the local economy.",
+        "clozeCn": "加州州長發表了一場關於改善地方經濟的演說。",
+        "clozeAnswer": "governor",
+        "unit": 10
+      },
+      {
+        "word": "government",
+        "chinese": "政府",
+        "example": "The government is building a new highway to connect the two cities.",
+        "exampleCn": "政府正在修建一條連接這兩座城市的新高速公路。",
+        "clozeQuestion": "The ________ passed a new strict law to protect the natural environment.",
+        "clozeCn": "政府通過了一項嚴格的新法律來保護自然環境。",
+        "clozeAnswer": "government",
+        "unit": 10
+      },
+      {
+        "word": "govern",
+        "chinese": "統治、管理",
+        "example": "A smart president is chosen by the people to govern the country well.",
+        "exampleCn": "人民選出一位聰明的總統來好好治理這個國家。",
+        "clozeQuestion": "It is difficult to ________ a large country with so many different cultures.",
+        "clozeCn": "要統治一個擁有多種不同文化的大國是很困難的。",
+        "clozeAnswer": "govern",
+        "unit": 10
+      },
+      {
+        "word": "familiar",
+        "chinese": "熟悉的",
+        "example": "Everyone is familiar with the story of Washington’s chopping down a cherry tree.",
+        "exampleCn": "每個人都很熟悉華盛頓砍倒櫻桃樹的故事。",
+        "clozeQuestion": "His face looks very ________ to me, but I just can't remember his name.",
+        "clozeCn": "他的臉讓我感到很熟悉，但我就是想不起他的名字。",
+        "clozeAnswer": "familiar",
+        "unit": 10
+      },
+      {
+        "word": "inn",
+        "chinese": "小酒館、客棧",
+        "example": "The inn was full of people talking, laughing and, above all, drinking.",
+        "exampleCn": "這間小酒館擠滿了人，談天說笑，更重要的是，開懷暢飲。",
+        "clozeQuestion": "We stayed at a small, quiet ________ in the mountains during our trip.",
+        "clozeCn": "在我們的旅途中，我們住在一間位於山裡的安靜小客棧。",
+        "clozeAnswer": "inn",
+        "unit": 10
+      },
+      {
+        "word": "innkeeper",
+        "chinese": "酒館主人、客棧老闆",
+        "example": "The friendly innkeeper welcomed us warmly and showed us to our room.",
+        "exampleCn": "友善的客棧老闆熱情地歡迎我們，並帶我們去房間。",
+        "clozeQuestion": "The ________ served us delicious hot soup when we arrived at the inn.",
+        "clozeCn": "當我們抵達客棧時，酒館主人端上了美味的熱湯給我們。",
+        "clozeAnswer": "innkeeper",
+        "unit": 10
+      },
+      {
+        "word": "sex",
+        "chinese": "性、性別",
+        "example": "“Sex and the City” is a famous TV series with a lot of sex in it.",
+        "exampleCn": "「慾望城市」是一部著名的電視影集，裡面有許多關於性的內容。",
+        "clozeQuestion": "Please write down your full name, age, and ________ on this medical form.",
+        "clozeCn": "請在這份醫療表單上寫下你的全名、年齡和性別。",
+        "clozeAnswer": "sex",
+        "unit": 10
+      },
+      {
+        "word": "sexy",
+        "chinese": "性感的",
+        "example": "She bought a sexy red dress to wear for the evening party.",
+        "exampleCn": "她買了一件性感的紅洋裝準備在晚會上穿。",
+        "clozeQuestion": "The famous pop singer is considered very ________ by millions of his fans.",
+        "clozeCn": "這位著名的流行歌手被他的數百萬粉絲認為非常性感。",
+        "clozeAnswer": "sexy",
+        "unit": 10
+      }
+    ],
+    "2": [
+      {
+        "word": "sexual",
+        "chinese": "性別的、兩性的",
+        "example": "If you pay attention, you will notice that there is sexual discrimination in our language.",
+        "exampleCn": "如果你注意，你會發現我們的語言有性別歧視。",
+        "clozeQuestion": "The company has strict rules against ________ harassment in the workplace.",
+        "clozeCn": "這間公司對於職場性騷擾有嚴格的規定。",
+        "clozeAnswer": "sexual",
+        "unit": 1
+      }
+    ]  
+  }
 }
+}      
