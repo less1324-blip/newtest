@@ -281,7 +281,7 @@
             </div>
         </section>
 
-        <section class="glass-panel rounded-3xl p-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 shadow-md" id="tabs-section">
+        <section class="glass-panel rounded-3xl p-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2 sm:gap-3 shadow-md" id="tabs-section">
             <button onclick="switchTab('list')" id="tab-btn-list" class="w-full py-2.5 sm:py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 font-bold text-xs sm:text-sm transition-all duration-200">
                 <i class="fa-solid fa-list-check text-xs sm:text-sm"></i> <span>修煉清單</span>
             </button>
@@ -296,6 +296,10 @@
             </button>
             <button onclick="switchTab('cloze')" id="tab-btn-cloze" class="w-full py-2.5 sm:py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 font-bold text-xs sm:text-sm transition-all duration-200">
                 <i class="fa-solid fa-file-pen text-xs sm:text-sm"></i> <span>語境填空</span>
+            </button>
+            <!-- 新增錯題回顧按鈕 -->
+            <button onclick="switchTab('review')" id="tab-btn-review" class="w-full py-2.5 sm:py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 font-bold text-xs sm:text-sm transition-all duration-200">
+                <i class="fa-solid fa-book-medical text-xs sm:text-sm"></i> <span>錯題回顧</span>
             </button>
             <button onclick="switchTab('admin')" id="tab-btn-admin" class="w-full py-2.5 sm:py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 font-bold text-xs sm:text-sm transition-all duration-200 border border-blue-500/20 hover:border-blue-500/50">
                 <i class="fa-solid fa-cloud-arrow-up text-blue-400 text-xs sm:text-sm"></i> <span class="text-blue-300">📥 匯入管理</span>
@@ -697,7 +701,7 @@
         let userState = {
             currentDojo: 'vocab', currentDifficulty: 'basic', currentLevel: 1, currentUnit: 1, currentTab: 'list', 
             exp: 0, streak: 0, highestStreak: 0, quizIndex: 0, spellingIndex: 0, clozeIndex: 0, flashcardIndex: 0,
-            correctCount: 0, totalAnswered: 0, voiceAccent: 'US', speechRate: 0.85,
+            correctCount: 0, totalAnswered: 0, voiceAccent: 'US', speechRate: 0.85, mistakes: [],
             autoSyncUrl: "https://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/0ddd02b88d07bd36e9e4758ba5b210d4575deb54/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/49f41879d4c9ab25de45cf0777051266402cb6e7/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/01633cf85ec1c856535b4b97a7dded4531afe198/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_advanced.json",
             autoSyncMode: "merge", autoSyncOnLoad: true
         };
@@ -1456,7 +1460,7 @@
         function switchTab(tabType) { 
             playSound('click'); 
             userState.currentTab = tabType; 
-            if (['flashcard', 'quiz', 'spelling', 'cloze'].includes(tabType)) {
+            if (['flashcard', 'quiz', 'spelling', 'cloze', 'review'].includes(tabType)) {
                 userState.flashcardIndex = 0; userState.quizIndex = 0; userState.spellingIndex = 0; userState.clozeIndex = 0;
             }
             if (isPlayingAll) togglePlayAll();
@@ -1467,10 +1471,10 @@
             const theme = getThemeColors();
             const isExamOrGrammar = userState.currentDojo === 'exam' || userState.currentDojo === 'grammar';
 
-            ['list', 'flashcard', 'quiz', 'spelling', 'cloze', 'admin'].forEach(tab => {
+            ['list', 'flashcard', 'quiz', 'spelling', 'cloze', 'review', 'admin'].forEach(tab => {
                 const btn = document.getElementById(`tab-btn-${tab}`); if (!btn) return;
                 
-                if (isExamOrGrammar && ['flashcard', 'spelling', 'cloze'].includes(tab)) {
+                if (isExamOrGrammar && ['flashcard', 'spelling', 'cloze', 'review'].includes(tab)) {
                     btn.classList.add('hidden');
                     return;
                 } else {
@@ -1506,7 +1510,134 @@
                 case 'quiz': renderQuizTab(dataList); break;
                 case 'spelling': renderSpellingTab(dataList); break;
                 case 'cloze': renderClozeTab(dataList); break;
+                case 'review': renderReviewTab(); break;
             }
+        }
+        
+        function addMistake(item, type) {
+            if (!userState.mistakes) userState.mistakes = [];
+            const exists = userState.mistakes.find(m => {
+                if (type === 'exam' && m.question && item.question) return m.question === item.question;
+                if (m.word && item.word) return m.word === item.word;
+                return false;
+            });
+            if (!exists) {
+                userState.mistakes.push({ ...item, mistakeType: type, timestamp: Date.now() });
+                saveProgress();
+            }
+        }
+
+        function renderReviewTab() {
+            const contentDiv = document.getElementById('dojo-content');
+            const theme = getThemeColors();
+            const mistakes = userState.mistakes || [];
+            
+            if (mistakes.length === 0) {
+                contentDiv.innerHTML = `
+                    <div class="flex flex-col justify-between min-h-[360px] gap-4">
+                        <div class="w-full flex justify-between items-center text-xs text-slate-400 font-bold border-b border-slate-800/80 pb-3">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-medical ${theme.text}"></i> 錯題心魔錄</span>
+                        </div>
+                        
+                        <div class="flex-1 flex flex-col items-center justify-center text-slate-500">
+                            <div class="p-5 ${theme.bgLight} rounded-full border ${theme.border} mb-4">
+                                <i class="fa-solid fa-ghost text-4xl ${theme.text}"></i>
+                            </div>
+                            <h3 class="text-lg font-black text-slate-200">此處尚無心魔</h3>
+                            <p class="text-sm mt-2 text-center leading-relaxed">當您在境界試煉或字彙淬鍊中失誤時，<br>該單字或題目將會被收錄至此，等待您再次超渡。</p>
+                            <button onclick="switchTab('quiz')" class="mt-6 px-5 py-2.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 hover:text-white rounded-xl transition-all flex items-center gap-2 shadow-sm text-sm font-bold">
+                                <i class="fa-solid fa-shield-halved"></i> 前往境界試煉
+                            </button>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            let cardsHtml = '';
+            mistakes.forEach((m, idx) => {
+                let contentHtml = '';
+                if (m.mistakeType === 'exam') {
+                     contentHtml = `
+                        <div class="font-bold text-slate-200 mb-2 leading-relaxed">${m.question}</div>
+                        <div class="text-emerald-400 text-sm font-bold mb-2"><i class="fa-solid fa-check mr-1"></i>正確解答：${m.answer}</div>
+                        <div class="text-xs text-slate-400 bg-slate-950 p-2.5 rounded-lg border border-slate-800 leading-relaxed">${m.explanation}</div>
+                     `;
+                } else {
+                     contentHtml = `
+                        <div class="flex justify-between items-start mb-1.5">
+                            <h4 class="text-xl font-black text-white tracking-wide">${m.word}</h4>
+                            <button onclick="speakWord('${m.word.replace(/'/g, "\\'")}')" class="text-slate-400 hover:text-orange-400 transition-colors p-1"><i class="fa-solid fa-volume-high"></i></button>
+                        </div>
+                        <div class="text-sm font-bold text-orange-400 mb-2.5">${m.chinese}</div>
+                        ${m.example ? `<div class="text-xs text-slate-300 italic mb-1.5 leading-relaxed bg-slate-950/50 p-2.5 rounded-lg border border-slate-800/50">"${m.example}"<br><span class="text-slate-400 mt-1.5 block not-italic">${m.exampleCn}</span></div>` : ''}
+                     `;
+                }
+
+                cardsHtml += `
+                    <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 relative group hover:border-orange-500/30 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg hover:shadow-orange-500/10">
+                        <button onclick="removeMistake(${idx})" class="absolute top-3 right-3 w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white flex items-center justify-center transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10" title="淨化心魔">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <div class="flex-1">
+                            <div class="text-[10px] text-slate-500 uppercase font-black mb-3 flex items-center gap-1.5">
+                                <i class="fa-solid fa-tag"></i> ${m.mistakeType === 'exam' ? '實戰考題失誤' : m.mistakeType === 'spelling' ? '拼字淬鍊失誤' : m.mistakeType === 'cloze' ? '語境填空失誤' : '境界試煉失誤'}
+                            </div>
+                            ${contentHtml}
+                        </div>
+                    </div>
+                `;
+            });
+
+            contentDiv.innerHTML = `
+                <div class="flex flex-col gap-4 min-h-[360px]">
+                    <div class="w-full flex justify-between items-center text-xs text-slate-400 font-bold border-b border-slate-800/80 pb-3">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-medical ${theme.text}"></i> 錯題心魔錄</span>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-rose-500/10 text-rose-400 border border-rose-500/20 px-2.5 py-1 rounded-md font-mono">累積 ${mistakes.length} 題</span>
+                            <button onclick="clearAllMistakes()" class="bg-slate-800 hover:bg-rose-600 hover:text-white text-slate-300 px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm active:scale-95">
+                                <i class="fa-solid fa-broom"></i> 淨化全部
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar pb-4">
+                        ${cardsHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function removeMistake(idx) {
+            playSound('click');
+            userState.mistakes.splice(idx, 1);
+            saveProgress();
+            renderReviewTab();
+            showToast("已成功淨化該錯題！", "success");
+        }
+
+        function clearAllMistakes() {
+            playSound('click');
+            const modal = document.getElementById('custom-confirm-modal');
+            document.getElementById('confirm-modal-title').textContent = "確定淨化所有錯題心魔？";
+            document.getElementById('confirm-modal-desc').textContent = "此操作將會清空錯題本中的所有紀錄，且無法復原。";
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.firstElementChild.classList.remove('scale-95');
+
+            document.getElementById('confirm-modal-cancel').onclick = () => {
+                playSound('click');
+                modal.classList.add('pointer-events-none', 'opacity-0');
+                modal.firstElementChild.classList.add('scale-95');
+            };
+
+            document.getElementById('confirm-modal-proceed').onclick = () => {
+                playSound('click');
+                userState.mistakes = [];
+                saveProgress();
+                renderReviewTab();
+                modal.classList.add('pointer-events-none', 'opacity-0');
+                modal.firstElementChild.classList.add('scale-95');
+                showToast("✨ 錯題心魔已全數淨化！", "success");
+            };
         }
 
         function renderExamList(data) {
@@ -1653,6 +1784,7 @@
                 setTimeout(() => nextExamQuestion(dataLength), 1500);
             } else {
                 playSound('wrong');
+                addMistake(currentItem, 'exam');
                 element.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center gap-3 bg-rose-500/10 border border-rose-500 text-rose-400 shadow-neon-rose exam-option-btn";
                 element.querySelector('span').className = "w-7 h-7 rounded-lg bg-rose-500 text-white flex items-center justify-center text-xs font-black shrink-0 font-mono";
                 
@@ -1910,6 +2042,7 @@
                 setTimeout(() => nextQuizQuestion(dataLength), 1500);
             } else {
                 playSound('wrong');
+                addMistake(currentItem, 'quiz');
                 element.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center justify-between bg-rose-500/10 border border-rose-500 text-rose-400 shadow-neon-rose";
                 userState.streak = 0;
                 optionButtons.forEach(btn => {
@@ -2043,6 +2176,7 @@
                 setTimeout(() => nextSpellingQuestion(dataLength), 1500);
             } else {
                 playSound('wrong');
+                addMistake(getActiveDataList()[idx], 'spelling');
                 feedback.className = "p-4 rounded-xl text-center bg-rose-500/10 border border-rose-500 text-rose-350 shadow-neon-rose";
                 feedback.innerHTML = `
                     <div class="flex flex-col gap-2 items-center">
@@ -2157,6 +2291,7 @@
                 }
             } else {
                 playSound('wrong');
+                addMistake(getActiveDataList()[userState.clozeIndex], 'cloze');
                 feedback.className = "p-3.5 rounded-xl text-center text-sm font-bold bg-rose-500/10 border border-rose-500 text-rose-450";
                 feedback.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1.5"></i>拼法受阻！正確填空答案應為：<span class="underline font-mono ml-1 text-white text-base">${correctAnswer}</span>`;
                 userState.streak = 0; showToast(`答案不對，再接再厲！`, 'error');
