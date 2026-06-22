@@ -488,7 +488,7 @@
                         <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-medium mb-6">
                             「準備好進行解碼了嗎？」<br><br>
                             點擊下方的 <strong class="text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded mx-1">[開始解碼]</strong>，我們將從 Level 1 帶你入門。<br><br>
-                            每完成一個等級，你將收集到更多的「單字積木」。現在，讓我們從拆解第一個單字開始，用邏輯取代死背，讓單字成為你的長期記憶！
+                            每完成一個等級，你將收集到更多的「單字積 চিন্ত木」。現在，讓我們從拆解第一個單字開始，用邏輯取代死背，讓單字成為你的長期記憶！
                         </p>
                     </div>
                 </div>
@@ -836,10 +836,15 @@
         document.addEventListener('click', () => { initAudioContext(); }, { once: true });
         document.addEventListener('touchstart', () => { initAudioContext(); }, { once: true });
 
-        function playSound(type) {
+        async function playSound(type) {
             try {
                 const ctx = initAudioContext();
                 if (!ctx) return;
+                
+                // 強制喚醒音效引擎，突破 iframe 限制
+                if (ctx.state === 'suspended') {
+                    await ctx.resume();
+                }
                 
                 const now = ctx.currentTime;
                 const osc = ctx.createOscillator(); 
@@ -1784,7 +1789,7 @@
                 setTimeout(() => nextExamQuestion(dataLength), 1500);
             } else {
                 playSound('wrong');
-                addMistake(currentItem, 'exam');
+                addMistake(getActiveDataList()[idx], 'exam');
                 element.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center gap-3 bg-rose-500/10 border border-rose-500 text-rose-400 shadow-neon-rose exam-option-btn";
                 element.querySelector('span').className = "w-7 h-7 rounded-lg bg-rose-500 text-white flex items-center justify-center text-xs font-black shrink-0 font-mono";
                 
@@ -2376,7 +2381,7 @@
                                 <div><label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標境界</label><select id="bulk-level" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-xs font-bold text-slate-200 outline-none">${Array.from({length: 30}, (_, i) => i + 1).map(l => `<option value="${l}">L${l}</option>`).join('')}</select></div>
                                 <div><label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標章節</label><select id="bulk-unit" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-xs font-bold text-slate-200 outline-none">${[1,2,3,4,5,6,7,8,9,10].map(u => `<option value="${u}">U${u}</option>`).join('')}</select></div>
                             </div>
-                            <textarea id="bulk-import-area" rows="6" placeholder="單字名稱 中文翻譯說明&#10;Eg1: 英文例句&#10;例句中文對照&#10;Cloze: 英文填空題 (要填處打 a______e 底線)&#10;ClozeCn: 填空中文提示" class="w-full p-3 bg-slate-950 border border-slate-850 focus:border-orange-500 rounded-xl font-mono text-xs text-slate-300 outline-none placeholder-slate-700 resize-none transition-colors custom-scrollbar"></textarea>
+                            <textarea id="bulk-import-area" rows="6" placeholder="單字名稱 中文翻譯說明\nEg1: 英文例句\n例句中文對照\nCloze: 英文填空題 (要填處打 a______e 底線)\nClozeCn: 填空中文提示" class="w-full p-3 bg-slate-950 border border-slate-850 focus:border-orange-500 rounded-xl font-mono text-xs text-slate-300 outline-none placeholder-slate-700 resize-none transition-colors custom-scrollbar"></textarea>
                             <div class="flex gap-3 justify-end"><button onclick="processBulkImport()" class="px-5 py-2 bg-orange-600 hover:bg-orange-550 text-slate-100 font-bold text-xs rounded-xl transition-all shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-bolt"></i> 執行格式解析並匯入</button></div>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col gap-3">
