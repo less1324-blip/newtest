@@ -231,7 +231,7 @@
                         <h2 class="text-lg sm:text-xl font-black text-slate-100 mt-0.5">文法特訓</h2>
                     </div>
                 </div>
-                <div id="grammar-active-border" class="absolute inset-x-0 bottom-0 h-1 bg-rose-500 scale-x-0 transition-transform duration-300"></div>
+                <div id="grammar-active-border" class="absolute inset-x-0 bottom-0 h-1 bg-rose-500 scale-x-100 transition-transform duration-300"></div>
             </button>
 
             <!-- 實戰考題專區 -->
@@ -297,7 +297,6 @@
             <button onclick="switchTab('cloze')" id="tab-btn-cloze" class="w-full py-2.5 sm:py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 font-bold text-xs sm:text-sm transition-all duration-200">
                 <i class="fa-solid fa-file-pen text-xs sm:text-sm"></i> <span>語境填空</span>
             </button>
-            <!-- 新增錯題回顧按鈕 -->
             <button onclick="switchTab('review')" id="tab-btn-review" class="w-full py-2.5 sm:py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 font-bold text-xs sm:text-sm transition-all duration-200">
                 <i class="fa-solid fa-book-medical text-xs sm:text-sm"></i> <span>錯題回顧</span>
             </button>
@@ -488,7 +487,7 @@
                         <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-medium mb-6">
                             「準備好進行解碼了嗎？」<br><br>
                             點擊下方的 <strong class="text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded mx-1">[開始解碼]</strong>，我們將從 Level 1 帶你入門。<br><br>
-                            每完成一個等級，你將收集到更多的「單字積 চিন্ত木」。現在，讓我們從拆解第一個單字開始，用邏輯取代死背，讓單字成為你的長期記憶！
+                            每完成一個等級，你將收集到更多的「單字積木」。現在，讓我們從拆解第一個單字開始，用邏輯取代死背，讓單字成為你的長期記憶！
                         </p>
                     </div>
                 </div>
@@ -684,6 +683,7 @@
                 advanced: {} 
             },
             grammar: {
+                pos: {}, 
                 pattern: {
                     1: [
                         {
@@ -694,7 +694,7 @@
                         }
                     ]
                 }, 
-                pos: {}, relative: {}, noun_clause: {}, causative: {}, linking: {}, participle: {}, sense: {}, inversion: {}, tense: {}, reading: {}
+                tense: {}, relative: {}, noun_clause: {}, causative: {}, linking: {}, sense: {}, participle: {}, inversion: {}, structure_review: {}, reading: {}
             }
         };
         
@@ -702,7 +702,7 @@
             currentDojo: 'vocab', currentDifficulty: 'basic', currentLevel: 1, currentUnit: 1, currentTab: 'list', 
             exp: 0, streak: 0, highestStreak: 0, quizIndex: 0, spellingIndex: 0, clozeIndex: 0, flashcardIndex: 0,
             correctCount: 0, totalAnswered: 0, voiceAccent: 'US', speechRate: 0.85, mistakes: [],
-            autoSyncUrl: "https://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/0ddd02b88d07bd36e9e4758ba5b210d4575deb54/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/49f41879d4c9ab25de45cf0777051266402cb6e7/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/01633cf85ec1c856535b4b97a7dded4531afe198/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_advanced.json",
+            autoSyncUrl: "https://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E4%BA%94%E5%A4%A7%E5%8F%A5%E5%9E%8B%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%85%AB%E5%A4%A7%E8%A9%9E%E9%A1%9E%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%8F%A5%E5%9E%8B%E7%B5%90%E6%A7%8B%E6%96%87%E6%B3%95.json",
             autoSyncMode: "merge", autoSyncOnLoad: true
         };
 
@@ -836,22 +836,21 @@
         document.addEventListener('click', () => { initAudioContext(); }, { once: true });
         document.addEventListener('touchstart', () => { initAudioContext(); }, { once: true });
 
-        async function playSound(type) {
+        function playSound(type) {
             try {
                 const ctx = initAudioContext();
                 if (!ctx) return;
                 
-                // 強制喚醒音效引擎，突破 iframe 限制
-                if (ctx.state === 'suspended') {
-                    await ctx.resume();
-                }
-                
-                const now = ctx.currentTime;
+                // 加一點點微小的緩衝時間 (15ms)，避免 DOM 渲染的瞬間卡斷主執行緒而產生音效延遲感
+                const now = ctx.currentTime + 0.015;
                 const osc = ctx.createOscillator(); 
                 const gain = ctx.createGain();
                 
                 osc.connect(gain); 
                 gain.connect(ctx.destination);
+                
+                // 預設靜音，避免雜音
+                gain.gain.value = 0;
                 
                 if (type === 'correct') {
                     osc.type = 'sine';
@@ -883,6 +882,7 @@
                         noteOsc.connect(noteGain); 
                         noteGain.connect(ctx.destination);
                         noteOsc.type = 'sine';
+                        noteGain.gain.value = 0;
                         const time = now + idx * 0.1;
                         noteOsc.frequency.setValueAtTime(freq, time);
                         noteGain.gain.setValueAtTime(0.1, time); 
@@ -896,15 +896,15 @@
 
         function getActiveDataList() {
             if (userState.currentDojo === 'vocab') {
-                return (mainDatabase.vocab[userState.currentDifficulty]?.[userState.currentLevel] || []).filter(item => (item.unit || 1) === userState.currentUnit);
+                return ((mainDatabase.vocab[userState.currentDifficulty] && mainDatabase.vocab[userState.currentDifficulty][userState.currentLevel]) || []).filter(item => (item.unit || 1) === userState.currentUnit);
             } else if (userState.currentDojo === 'phrase') {
-                return (mainDatabase.phrase?.[userState.currentLevel] || []).filter(item => (item.unit || 1) === userState.currentUnit);
+                return ((mainDatabase.phrase && mainDatabase.phrase[userState.currentLevel]) || []).filter(item => (item.unit || 1) === userState.currentUnit);
             } else if (userState.currentDojo === 'affix') {
-                return (mainDatabase.affix?.[userState.currentLevel] || []);
+                return ((mainDatabase.affix && mainDatabase.affix[userState.currentLevel]) || []);
             } else if (userState.currentDojo === 'exam') {
-                return (mainDatabase.exam?.[userState.currentDifficulty]?.[userState.currentLevel] || []);
+                return ((mainDatabase.exam && mainDatabase.exam[userState.currentDifficulty] && mainDatabase.exam[userState.currentDifficulty][userState.currentLevel]) || []);
             } else if (userState.currentDojo === 'grammar') {
-                return (mainDatabase.grammar?.[userState.currentDifficulty]?.[userState.currentLevel] || []);
+                return ((mainDatabase.grammar && mainDatabase.grammar[userState.currentDifficulty] && mainDatabase.grammar[userState.currentDifficulty][userState.currentLevel]) || []);
             }
             return [];
         }
@@ -1054,17 +1054,17 @@
             const sw = searchWord.toLowerCase();
             for (const diff of ['basic', 'intermediate', 'advanced']) {
                 for (let l = 1; l <= 10; l++) {
-                    const list = mainDatabase.vocab[diff]?.[l] || [];
+                    const list = (mainDatabase.vocab[diff] && mainDatabase.vocab[diff][l]) || [];
                     const found = list.find(item => item.word.toLowerCase() === sw);
                     if (found) return found.chinese;
                 }
             }
             for (let l = 1; l <= 10; l++) {
-                const list = mainDatabase.phrase?.[l] || [];
+                const list = (mainDatabase.phrase && mainDatabase.phrase[l]) || [];
                 const found = list.find(item => item.word.toLowerCase() === sw);
                 if (found) return found.chinese;
                 
-                const affixList = mainDatabase.affix?.[l] || [];
+                const affixList = (mainDatabase.affix && mainDatabase.affix[l]) || [];
                 const foundAffix = affixList.find(item => item.word.toLowerCase() === sw);
                 if (foundAffix) return foundAffix.chinese;
             }
@@ -1174,9 +1174,9 @@
             try { savedState = localStorage.getItem('english_dojo_state_v6'); savedMainDb = localStorage.getItem('english_dojo_main_db_v6'); } catch (e) {}
             if (savedState) {
                 try { 
-                    userState = { ...userState, ...JSON.parse(savedState) }; 
-                    if (!userState.autoSyncUrl || !userState.autoSyncUrl.includes("exam_advanced") || !userState.autoSyncUrl.includes("exam_basic")) {
-                        userState.autoSyncUrl = "https://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/0ddd02b88d07bd36e9e4758ba5b210d4575deb54/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/49f41879d4c9ab25de45cf0777051266402cb6e7/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/01633cf85ec1c856535b4b97a7dded4531afe198/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_advanced.json";
+                    userState = Object.assign({}, userState, JSON.parse(savedState)); 
+                    if (!userState.autoSyncUrl || !userState.autoSyncUrl.includes("f244b2a14757b2a73b0abb87c4d55927cc5306a2")) {
+                        userState.autoSyncUrl = "https://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E4%BA%94%E5%A4%A7%E5%8F%A5%E5%9E%8B%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%85%AB%E5%A4%A7%E8%A9%9E%E9%A1%9E%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%8F%A5%E5%9E%8B%E7%B5%90%E6%A7%8B%E6%96%87%E6%B3%95.json";
                     }
                 } catch(e) {}
             }
@@ -1205,7 +1205,7 @@
                     if (!mainDatabase.exam[diff][l]) mainDatabase.exam[diff][l] = [];
                 }
             });
-            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
+            ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(unit => {
                 if (!mainDatabase.grammar[unit]) mainDatabase.grammar[unit] = {};
                 for (let l = 1; l <= 30; l++) {
                     if (!mainDatabase.grammar[unit][l]) mainDatabase.grammar[unit][l] = [];
@@ -1269,9 +1269,13 @@
             userState.currentDojo = dojoType; 
             
             if (dojoType === 'vocab' || dojoType === 'exam') userState.currentDifficulty = 'basic'; 
-            else if (dojoType === 'grammar') userState.currentDifficulty = 'pattern';
+            else if (dojoType === 'grammar') userState.currentDifficulty = 'pos';
             
-            if (dojoType !== 'exam' && dojoType !== 'grammar' && userState.currentLevel > 10) {
+            if (dojoType === 'exam') {
+                // 實戰考題保留到 L30 不重置
+            } else if (dojoType === 'grammar' && (userState.currentDifficulty === 'structure_review' || userState.currentDifficulty === 'reading')) {
+                // 句型結構與閱讀練習保留到 L30 不重置
+            } else if (userState.currentLevel > 10) {
                 userState.currentLevel = 1; 
             }
             
@@ -1380,6 +1384,7 @@
                     { id: 'sense', name: '感官動詞' },
                     { id: 'participle', name: '分詞構句' },
                     { id: 'inversion', name: '倒裝句' },
+                    { id: 'structure_review', name: '句型結構總複習' },
                     { id: 'reading', name: '綜合閱讀練習' }
                 ];
             } else {
@@ -1422,7 +1427,16 @@
             if (bgGlow) bgGlow.className = `absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-20 ${theme.bgLight} blur-3xl pointer-events-none rounded-full glow-pulse`;
             if (groupIcon) groupIcon.className = `fa-solid fa-crown ${theme.iconColor}`;
             
-            let maxLevels = (userState.currentDojo === 'exam' || userState.currentDojo === 'grammar') ? 30 : 10;
+            let maxLevels = 10;
+            if (userState.currentDojo === 'exam') {
+                maxLevels = 30;
+            } else if (userState.currentDojo === 'grammar') {
+                if (userState.currentDifficulty === 'structure_review' || userState.currentDifficulty === 'reading') {
+                    maxLevels = 30;
+                } else {
+                    maxLevels = 10;
+                }
+            }
             
             for (let i = 1; i <= maxLevels; i++) {
                 const isActive = userState.currentLevel === i;
@@ -1539,7 +1553,7 @@
                 return false;
             });
             if (!exists) {
-                userState.mistakes.push({ ...item, mistakeType: type, timestamp: Date.now() });
+                userState.mistakes.push(Object.assign({}, item, { mistakeType: type, timestamp: Date.now() }));
                 saveProgress();
             }
         }
@@ -1662,10 +1676,10 @@
             
             const diffNameMap = {
                 'basic': '初級', 'intermediate': '中級', 'advanced': '中高級',
-                'pattern': '五大句型', 'pos': '八大詞類', 'relative': '關係代名詞',
-                'noun_clause': '名詞子句', 'causative': '使役動詞', 'linking': '連綴動詞',
-                'participle': '分詞構句', 'sense': '感官動詞', 'inversion': '倒裝句',
-                'tense': '12時態', 'reading': '綜合閱讀練習'
+                'pos': '八大詞類', 'pattern': '五大句型', 'tense': '12時態', 
+                'relative': '關係代名詞', 'noun_clause': '名詞子句', 'causative': '使役動詞', 
+                'linking': '連綴動詞', 'sense': '感官動詞', 'participle': '分詞構句', 
+                'inversion': '倒裝句', 'structure_review': '句型結構總複習', 'reading': '綜合閱讀練習'
             };
             const diffName = diffNameMap[userState.currentDifficulty] ? `[${diffNameMap[userState.currentDifficulty]}] ` : '';
             const typeName = userState.currentDojo === 'grammar' ? '文法特訓' : '實戰測驗';
@@ -1801,7 +1815,8 @@
                 setTimeout(() => nextExamQuestion(dataLength), 1500);
             } else {
                 playSound('wrong');
-                addMistake(getActiveDataList()[idx], 'exam');
+                const listData = getActiveDataList();
+                if(listData && listData[idx]) addMistake(listData[idx], 'exam');
                 element.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center gap-3 bg-rose-500/10 border border-rose-500 text-rose-400 shadow-neon-rose exam-option-btn";
                 element.querySelector('span').className = "w-7 h-7 rounded-lg bg-rose-500 text-white flex items-center justify-center text-xs font-black shrink-0 font-mono";
                 
@@ -1810,6 +1825,7 @@
                 optionButtons.forEach(btn => {
                     const letterSpan = btn.querySelector('span');
                     if (letterSpan && letterSpan.textContent === correctLetter) {
+                        const theme = getThemeColors();
                         btn.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center gap-3 bg-emerald-500/10 border border-emerald-500 text-emerald-400 exam-option-btn opacity-100 scale-105";
                         letterSpan.className = "w-7 h-7 rounded-lg bg-emerald-500 text-slate-950 flex items-center justify-center text-xs font-black shrink-0 font-mono";
                     }
@@ -1939,12 +1955,12 @@
                     <div class="hidden sm:flex items-center gap-4 text-[10px] font-bold text-slate-500"><span><kbd class="bg-slate-950 px-1.5 py-0.5 rounded text-slate-400 border border-slate-850">空白鍵</kbd> 翻轉</span><span><kbd class="bg-slate-950 px-1.5 py-0.5 rounded text-slate-400 border border-slate-850">← / →</kbd> 切換</span></div>
                     <div class="flex gap-4 w-full max-w-sm justify-between items-center">
                         <button onclick="navigateFlashcard(-1, ${data.length})" class="flex-1 py-2.5 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:text-white rounded-2xl text-slate-400 font-bold text-xs sm:text-sm transition-all duration-200"><i class="fa-solid fa-arrow-left mr-1.5"></i>上一個</button>
-                        <button onclick="speakWord('${safeWord}'); setTimeout(() => speakWord('${safeExample}'), 800);" class="w-11 h-11 flex items-center justify-center rounded-full ${theme.bgLight} ${theme.bgHover} ${theme.text} border ${theme.border} active:scale-95 transition-all shadow-lg" title="朗讀"><i class="fa-solid fa-volume-high text-base"></i></button>
+                        <button onclick="speakWord('${safeWord}'); setTimeout(function(){speakWord('${safeExample}')}, 800);" class="w-11 h-11 flex items-center justify-center rounded-full ${theme.bgLight} ${theme.bgHover} ${theme.text} border ${theme.border} active:scale-95 transition-all shadow-lg" title="朗讀"><i class="fa-solid fa-volume-high text-base"></i></button>
                         <button onclick="navigateFlashcard(1, ${data.length})" class="flex-1 py-2.5 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:text-white rounded-2xl text-slate-400 font-bold text-xs sm:text-sm transition-all duration-200">下一個<i class="fa-solid fa-arrow-right ml-1.5"></i></button>
                     </div>
                 </div>
             `;
-            setTimeout(() => speakWord(item.word), 300);
+            setTimeout(function() { speakWord(item.word); }, 300);
         }
 
         function flipFlashcard() { 
@@ -1954,45 +1970,47 @@
                 card.classList.toggle('flipped');
                 if (card.classList.contains('flipped')) {
                     const dataList = getActiveDataList();
-                    if(dataList && dataList[userState.flashcardIndex]) setTimeout(() => speakWord(dataList[userState.flashcardIndex].example), 300);
+                    if(dataList && dataList[userState.flashcardIndex]) setTimeout(function(){ speakWord(dataList[userState.flashcardIndex].example); }, 300);
                 }
             } 
         }
 
         function navigateFlashcard(dir, total) {
             playSound('click'); const card = document.getElementById('flashcard-element'); if (card) card.classList.remove('flipped');
-            setTimeout(() => { userState.flashcardIndex = (userState.flashcardIndex + dir + total) % total; saveProgress(); renderContent(); }, 150);
+            setTimeout(function() { userState.flashcardIndex = (userState.flashcardIndex + dir + total) % total; saveProgress(); renderContent(); }, 150);
         }
 
         let generatedOptions = []; 
         function generateQuizOptions(correctItem) {
             let pool = [];
             if(userState.currentDojo === 'vocab') {
-                ['basic', 'intermediate', 'advanced'].forEach(d => {
+                ['basic', 'intermediate', 'advanced'].forEach(function(d) {
                     for(let l=1; l<=10; l++){
                         if(mainDatabase.vocab[d] && mainDatabase.vocab[d][l]) pool = pool.concat(mainDatabase.vocab[d][l]);
                     }
                 });
             } else if (userState.currentDojo === 'phrase') {
                 for(let l=1; l<=10; l++){
-                    if(mainDatabase.phrase[l]) pool = pool.concat(mainDatabase.phrase[l]);
+                    if(mainDatabase.phrase && mainDatabase.phrase[l]) pool = pool.concat(mainDatabase.phrase[l]);
                 }
             } else {
                 for(let l=1; l<=10; l++){
-                    if(mainDatabase.affix[l]) pool = pool.concat(mainDatabase.affix[l]);
+                    if(mainDatabase.affix && mainDatabase.affix[l]) pool = pool.concat(mainDatabase.affix[l]);
                 }
             }
-            let uniquePoolMap = new Map();
-            pool.forEach(item => { if(item.word !== correctItem.word) uniquePoolMap.set(item.word, item); });
-            let uniquePool = Array.from(uniquePoolMap.values());
+            let uniquePoolMap = {};
+            pool.forEach(function(item) { if(item.word !== correctItem.word) uniquePoolMap[item.word] = item; });
+            let uniquePool = [];
+            for (let key in uniquePoolMap) uniquePool.push(uniquePoolMap[key]);
+            
             for (let i = uniquePool.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1)); [uniquePool[i], uniquePool[j]] = [uniquePool[j], uniquePool[i]];
+                const j = Math.floor(Math.random() * (i + 1)); const temp = uniquePool[i]; uniquePool[i] = uniquePool[j]; uniquePool[j] = temp;
             }
             let wrongOptions = uniquePool.slice(0, 3);
             while (wrongOptions.length < 3) wrongOptions.push({ word: "Dummy" + wrongOptions.length, chinese: "干擾選項" + wrongOptions.length });
-            const finalOptions = [correctItem, ...wrongOptions];
+            const finalOptions = [correctItem].concat(wrongOptions);
             for (let i = finalOptions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1)); [finalOptions[i], finalOptions[j]] = [finalOptions[j], finalOptions[i]];
+                const j = Math.floor(Math.random() * (i + 1)); const temp = finalOptions[i]; finalOptions[i] = finalOptions[j]; finalOptions[j] = temp;
             }
             return finalOptions;
         }
@@ -2002,7 +2020,9 @@
             if (idx >= data.length) userState.quizIndex = 0;
             const currentItem = data[userState.quizIndex];
             
-            if (currentQuizWord !== currentItem.word || generatedOptions.length === 0 || !generatedOptions.some(opt => opt.word === currentItem.word)) { 
+            let foundCurrent = false;
+            for(let i=0; i<generatedOptions.length; i++){ if(generatedOptions[i].word === currentItem.word) { foundCurrent = true; break; } }
+            if (currentQuizWord !== currentItem.word || generatedOptions.length === 0 || !foundCurrent) { 
                 generatedOptions = generateQuizOptions(currentItem); 
                 currentQuizWord = currentItem.word; 
             }
@@ -2019,12 +2039,12 @@
                         <h3 class="text-4xl sm:text-5xl font-black tracking-wide mt-3 text-white">${currentItem.word}</h3>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-2xl mx-auto" id="quiz-options-container">
-                        ${generatedOptions.map((opt, oIdx) => `
+                        ${generatedOptions.map(function(opt, oIdx) { return `
                             <button onclick="checkQuizAnswer('${opt.word.replace(/'/g, "\\'")}', this, ${userState.quizIndex}, ${data.length})" class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center justify-between group active:scale-98">
                                 <span>${oIdx + 1}. ${opt.chinese}</span>
                                 <span class="opacity-0 group-hover:opacity-40 text-[10px] transition-all duration-200 font-mono">按 ${oIdx + 1} <i class="fa-solid fa-hand-pointer ml-1"></i></span>
                             </button>
-                        `).join('')}
+                        `}).join('')}
                     </div>
                     <div class="hidden sm:flex justify-center items-center gap-4 text-[10px] font-bold text-slate-500">
                         <span>按鍵 <kbd class="bg-slate-950 px-1.5 py-0.5 rounded text-slate-400 border border-slate-850">1 - 4</kbd> 選取選項</span>
@@ -2037,7 +2057,7 @@
                     </div>
                 </div>
             `;
-            setTimeout(() => speakWord(currentItem.word), 300);
+            setTimeout(function(){ speakWord(currentItem.word); }, 300);
         }
 
         function checkQuizAnswer(selectedWord, element, correctIdx, dataLength) {
@@ -2045,7 +2065,7 @@
             const isCorrect = selectedWord === currentItem.word;
             const optionButtons = document.querySelectorAll('#quiz-options-container button');
             
-            optionButtons.forEach(btn => { btn.disabled = true; btn.classList.add('opacity-50'); });
+            optionButtons.forEach(function(btn) { btn.disabled = true; btn.classList.add('opacity-50'); });
             element.classList.remove('opacity-50', 'bg-slate-900/60', 'border-slate-800/80');
             userState.totalAnswered += 1;
 
@@ -2056,13 +2076,13 @@
                 const gainedExp = 15 + Math.min(userState.streak, 5) * 2;
                 const lvlUp = addEXP(gainedExp);
                 showToast(`修煉正確！獲得靈氣 +${gainedExp} ${lvlUp ? '🎉 突破天劫！' : ''}`, 'success');
-                setTimeout(() => nextQuizQuestion(dataLength), 1500);
+                setTimeout(function(){ nextQuizQuestion(dataLength); }, 1500);
             } else {
                 playSound('wrong');
                 addMistake(currentItem, 'quiz');
                 element.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center justify-between bg-rose-500/10 border border-rose-500 text-rose-400 shadow-neon-rose";
                 userState.streak = 0;
-                optionButtons.forEach(btn => {
+                optionButtons.forEach(function(btn) {
                     if (btn.textContent.includes(currentItem.chinese)) {
                         btn.className = "p-4 rounded-xl text-left font-bold text-sm sm:text-base transition-all duration-200 flex items-center justify-between bg-emerald-500/10 border border-emerald-500 text-emerald-400";
                     }
@@ -2084,14 +2104,15 @@
             
             let masked = "";
             const wordLetters = currentItem.word.split("");
-            wordLetters.forEach((char, cIdx) => {
-                if ([" ", "-", "'", ",", ".", "/"].includes(char) || cIdx === 0 || cIdx === wordLetters.length - 1) masked += char;
+            wordLetters.forEach(function(char, cIdx) {
+                if (char === " " || char === "-" || char === "'" || char === "," || char === "." || char === "/") masked += char;
+                else if (cIdx === 0 || cIdx === wordLetters.length - 1) masked += char;
                 else masked += "_";
             });
 
-            const scrambledHtml = scrambleWordLetters(currentItem.word).map(char => 
-                `<span data-char="${char.toLowerCase()}" data-used="false" onclick="appendSpellingLetter('${char.replace(/'/g, "\\'")}')" class="spelling-fragment cursor-pointer hover:scale-110 px-2 py-1 bg-slate-900 border border-slate-800 ${theme.text} rounded-md font-mono text-base sm:text-lg font-bold transition-transform shadow-sm">${char}</span>`
-            ).join('');
+            const scrambledHtml = scrambleWordLetters(currentItem.word).map(function(char) { return `
+                <span data-char="${char.toLowerCase()}" data-used="false" onclick="appendSpellingLetter('${char.replace(/'/g, "\\'")}')" class="spelling-fragment cursor-pointer hover:scale-110 px-2 py-1 bg-slate-900 border border-slate-800 ${theme.text} rounded-md font-mono text-base sm:text-lg font-bold transition-transform shadow-sm">${char}</span>
+            `}).join('');
 
             contentDiv.innerHTML = `
                 <div class="flex flex-col justify-between min-h-[360px] gap-4">
@@ -2133,7 +2154,7 @@
                     </div>
                 </div>
             `;
-            setTimeout(() => { const inp = document.getElementById('spelling-input'); if (inp) inp.focus(); }, 100);
+            setTimeout(function() { const inp = document.getElementById('spelling-input'); if (inp) inp.focus(); }, 100);
         }
 
         function appendSpellingLetter(char) {
@@ -2144,10 +2165,14 @@
         function updateSpellingFragments(inputValue) {
             const container = document.getElementById('scrambled-hint-container'); if (!container) return;
             const fragments = container.querySelectorAll('.spelling-fragment');
-            fragments.forEach(f => { f.classList.remove('opacity-20', 'line-through', 'scale-95', 'pointer-events-none'); f.dataset.used = "false"; });
+            for (let i = 0; i < fragments.length; i++) {
+                fragments[i].classList.remove('opacity-20', 'line-through', 'scale-95', 'pointer-events-none');
+                fragments[i].dataset.used = "false";
+            }
             const typed = inputValue.toLowerCase().replace(/[^a-z0-9]/g, '').split('');
-            typed.forEach(char => {
-                for (let f of fragments) {
+            typed.forEach(function(char) {
+                for (let i=0; i<fragments.length; i++) {
+                    let f = fragments[i];
                     if (f.dataset.char === char && f.dataset.used === "false") {
                         f.dataset.used = "true"; f.classList.add('opacity-20', 'line-through', 'scale-95', 'pointer-events-none'); break;
                     }
@@ -2156,8 +2181,8 @@
         }
 
         function scrambleWordLetters(word) { 
-            let letters = word.toLowerCase().split('').filter(char => /[a-z0-9]/i.test(char));
-            for (let i = letters.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [letters[i], letters[j]] = [letters[j], letters[i]]; }
+            let letters = word.toLowerCase().split('').filter(function(char) { return /[a-z0-9]/i.test(char); });
+            for (let i = letters.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const temp = letters[i]; letters[i] = letters[j]; letters[j] = temp; }
             return letters; 
         }
 
@@ -2190,10 +2215,11 @@
                 feedback.innerHTML = `<i class="fa-solid fa-square-check mr-1.5"></i><span class="text-sm font-black">修煉成功！毫釐不差：</span><br><span class="font-mono text-white text-2xl font-black tracking-widest mt-2 inline-block">${correctWord}</span>`;
                 userState.streak += 1; userState.correctCount += 1;
                 const gainedExp = 25; const lvlUp = addEXP(gainedExp); showToast("拼寫正確！增加修为 +25", 'success');
-                setTimeout(() => nextSpellingQuestion(dataLength), 1500);
+                setTimeout(function(){ nextSpellingQuestion(dataLength); }, 1500);
             } else {
                 playSound('wrong');
-                addMistake(getActiveDataList()[idx], 'spelling');
+                const listData = getActiveDataList();
+                if(listData && listData[idx]) addMistake(listData[idx], 'spelling');
                 feedback.className = "p-4 rounded-xl text-center bg-rose-500/10 border border-rose-500 text-rose-350 shadow-neon-rose";
                 feedback.innerHTML = `
                     <div class="flex flex-col gap-2 items-center">
@@ -2247,7 +2273,7 @@
                         <input type="text" id="cloze-input" placeholder="請填寫對應的英文解答..." autocomplete="off" class="w-full px-4 py-3 bg-slate-950 border border-slate-850 ${theme.borderFocus} rounded-xl font-bold tracking-wide outline-none text-slate-100 placeholder-slate-700 transition-colors shadow-inner text-center text-base sm:text-lg" onkeydown="handleClozeEnter(event, '${qAns.replace(/'/g, "\\'")}', ${data.length}, '${fullSentence.replace(/'/g, "\\'")}')" />
                         <div id="cloze-suggestion-container" class="hidden flex-wrap gap-1.5 justify-center py-2 bg-slate-950/40 p-2.5 rounded-xl border border-slate-850 animate-fade-in">
                             <span class="text-[9px] text-slate-500 font-extrabold w-full text-center uppercase tracking-wider mb-1"><i class="fa-solid fa-puzzle-piece mr-1"></i>字母拼圖碎片</span>
-                            ${scrambleWordLetters(qAns).map(char => `<span class="px-2 py-1 bg-slate-900 border border-slate-800 text-emerald-450 rounded-md font-mono text-base sm:text-lg font-bold">${char}</span>`).join('')}
+                            ${scrambleWordLetters(qAns).map(function(char) { return `<span class="px-2 py-1 bg-slate-900 border border-slate-800 text-emerald-450 rounded-md font-mono text-base sm:text-lg font-bold">${char}</span>`}).join('')}
                         </div>
                     </div>
                     <div class="w-full max-w-md mx-auto flex flex-col gap-2.5">
@@ -2269,8 +2295,8 @@
                     </div>
                 </div>
             `;
-            setTimeout(() => speakWord(fullSentence), 300);
-            setTimeout(() => { const inp = document.getElementById('cloze-input'); if (inp) inp.focus(); }, 100);
+            setTimeout(function() { speakWord(fullSentence); }, 300);
+            setTimeout(function() { const inp = document.getElementById('cloze-input'); if (inp) inp.focus(); }, 100);
         }
 
         function toggleClozeLetters() { playSound('click'); document.getElementById('cloze-suggestion-container').classList.toggle('hidden'); }
@@ -2301,19 +2327,20 @@
                 addEXP(25); showToast("填空正確！修為增加 +25", 'success');
                 
                 if (fullSentence) {
-                    setTimeout(() => { speakWord(fullSentence); }, 600);
-                    setTimeout(() => { nextClozeQuestion(dataLength); }, 5600);
+                    setTimeout(function() { speakWord(fullSentence); }, 600);
+                    setTimeout(function() { nextClozeQuestion(dataLength); }, 5600);
                 } else {
-                    setTimeout(() => { nextClozeQuestion(dataLength); }, 5000);
+                    setTimeout(function() { nextClozeQuestion(dataLength); }, 5000);
                 }
             } else {
                 playSound('wrong');
-                addMistake(getActiveDataList()[userState.clozeIndex], 'cloze');
+                const listData = getActiveDataList();
+                if(listData && listData[userState.clozeIndex]) addMistake(listData[userState.clozeIndex], 'cloze');
                 feedback.className = "p-3.5 rounded-xl text-center text-sm font-bold bg-rose-500/10 border border-rose-500 text-rose-450";
                 feedback.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1.5"></i>拼法受阻！正確填空答案應為：<span class="underline font-mono ml-1 text-white text-base">${correctAnswer}</span>`;
                 userState.streak = 0; showToast(`答案不對，再接再厲！`, 'error');
                 
-                if (fullSentence) setTimeout(() => { speakWord(fullSentence); }, 600);
+                if (fullSentence) setTimeout(function() { speakWord(fullSentence); }, 600);
                 nextBtn.classList.remove('hidden');
             }
             saveProgress(); updateHeaderUI(); 
@@ -2333,7 +2360,7 @@
                     </div>
                 </div>
             `;
-            setTimeout(() => { const inp = document.getElementById('admin-pass-input'); if (inp) inp.focus(); }, 100);
+            setTimeout(function() { const inp = document.getElementById('admin-pass-input'); if (inp) inp.focus(); }, 100);
         }
 
         function attemptAdminUnlock() {
@@ -2347,16 +2374,16 @@
         function renderAdminTab() {
             const contentDiv = document.getElementById('dojo-content');
             let mainVocab = 0, mainPhrase = 0, mainAffix = 0, mainExam = 0, mainGrammar = 0;
-            ['basic', 'intermediate', 'advanced'].forEach(d => { 
-                for (let l=1; l<=10; l++) mainVocab += mainDatabase.vocab[d]?.[l]?.length || 0; 
-                for (let l=1; l<=30; l++) mainExam += mainDatabase.exam?.[d]?.[l]?.length || 0; 
+            ['basic', 'intermediate', 'advanced'].forEach(function(d) { 
+                for (let l=1; l<=10; l++) mainVocab += (mainDatabase.vocab[d] && mainDatabase.vocab[d][l] ? mainDatabase.vocab[d][l].length : 0); 
+                for (let l=1; l<=30; l++) mainExam += (mainDatabase.exam && mainDatabase.exam[d] && mainDatabase.exam[d][l] ? mainDatabase.exam[d][l].length : 0); 
             });
             for (let l=1; l<=10; l++) {
-                mainPhrase += mainDatabase.phrase?.[l]?.length || 0;
-                mainAffix += mainDatabase.affix?.[l]?.length || 0;
+                mainPhrase += (mainDatabase.phrase && mainDatabase.phrase[l] ? mainDatabase.phrase[l].length : 0);
+                mainAffix += (mainDatabase.affix && mainDatabase.affix[l] ? mainDatabase.affix[l].length : 0);
             }
-            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
-                for (let l=1; l<=30; l++) mainGrammar += mainDatabase.grammar[unit]?.[l]?.length || 0;
+            ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
+                for (let l=1; l<=30; l++) mainGrammar += (mainDatabase.grammar && mainDatabase.grammar[unit] && mainDatabase.grammar[unit][l] ? mainDatabase.grammar[unit][l].length : 0);
             });
 
             contentDiv.innerHTML = `
@@ -2387,11 +2414,11 @@
                                     <label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標難度/單元</label>
                                     <select id="bulk-difficulty" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-[11px] font-bold text-slate-200 outline-none custom-scrollbar">
                                         <optgroup label="單字/考題級別"><option value="basic">初級</option><option value="intermediate">中級</option><option value="advanced">中高級</option></optgroup>
-                                        <optgroup label="文法單元"><option value="pattern">五大句型</option><option value="pos">八大詞類</option><option value="relative">關係代名詞</option><option value="noun_clause">名詞子句</option><option value="causative">使役動詞</option><option value="linking">連綴動詞</option><option value="participle">分詞構句</option><option value="sense">感官動詞</option><option value="inversion">倒裝句</option><option value="tense">12時態</option><option value="reading">綜合閱讀練習</option></optgroup>
+                                        <optgroup label="文法單元"><option value="pos">八大詞類</option><option value="pattern">五大句型</option><option value="tense">12時態</option><option value="relative">關係代名詞</option><option value="noun_clause">名詞子句</option><option value="causative">使役動詞</option><option value="linking">連綴動詞</option><option value="sense">感官動詞</option><option value="participle">分詞構句</option><option value="inversion">倒裝句</option><option value="structure_review">句型結構總複習</option><option value="reading">綜合閱讀練習</option></optgroup>
                                     </select>
                                 </div>
-                                <div><label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標境界</label><select id="bulk-level" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-xs font-bold text-slate-200 outline-none">${Array.from({length: 30}, (_, i) => i + 1).map(l => `<option value="${l}">L${l}</option>`).join('')}</select></div>
-                                <div><label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標章節</label><select id="bulk-unit" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-xs font-bold text-slate-200 outline-none">${[1,2,3,4,5,6,7,8,9,10].map(u => `<option value="${u}">U${u}</option>`).join('')}</select></div>
+                                <div><label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標境界</label><select id="bulk-level" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-xs font-bold text-slate-200 outline-none">${Array.from({length: 30}, function(_, i){return i + 1}).map(function(l){return `<option value="${l}">L${l}</option>`}).join('')}</select></div>
+                                <div><label class="block text-[9px] text-orange-400 font-extrabold mb-1">目標章節</label><select id="bulk-unit" class="w-full px-2 py-1 bg-slate-900 border border-slate-850 rounded-lg text-xs font-bold text-slate-200 outline-none">${[1,2,3,4,5,6,7,8,9,10].map(function(u){return `<option value="${u}">U${u}</option>`}).join('')}</select></div>
                             </div>
                             <textarea id="bulk-import-area" rows="6" placeholder="單字名稱 中文翻譯說明\nEg1: 英文例句\n例句中文對照\nCloze: 英文填空題 (要填處打 a______e 底線)\nClozeCn: 填空中文提示" class="w-full p-3 bg-slate-950 border border-slate-850 focus:border-orange-500 rounded-xl font-mono text-xs text-slate-300 outline-none placeholder-slate-700 resize-none transition-colors custom-scrollbar"></textarea>
                             <div class="flex gap-3 justify-end"><button onclick="processBulkImport()" class="px-5 py-2 bg-orange-600 hover:bg-orange-550 text-slate-100 font-bold text-xs rounded-xl transition-all shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-bolt"></i> 執行格式解析並匯入</button></div>
@@ -2406,10 +2433,10 @@
                                 <select id="form-dojo" class="w-full px-2 py-1.5 bg-slate-950 border border-slate-850 rounded-lg text-[10px] text-slate-300"><option value="vocab">單字</option><option value="phrase">片語</option><option value="affix">字根字首</option><option value="grammar">文法特訓</option><option value="exam">考題</option></select>
                                 <select id="form-difficulty" class="w-full px-2 py-1.5 bg-slate-950 border border-slate-850 rounded-lg text-[10px] text-slate-300 custom-scrollbar">
                                     <optgroup label="單字/考題級別"><option value="basic">初級</option><option value="intermediate">中級</option><option value="advanced">中高級</option></optgroup>
-                                    <optgroup label="文法單元"><option value="pattern">五大句型</option><option value="pos">八大詞類</option><option value="relative">關係代名詞</option><option value="noun_clause">名詞子句</option><option value="causative">使役動詞</option><option value="linking">連綴動詞</option><option value="participle">分詞構句</option><option value="sense">感官動詞</option><option value="inversion">倒裝句</option><option value="tense">12時態</option><option value="reading">綜合閱讀練習</option></optgroup>
+                                    <optgroup label="文法單元"><option value="pos">八大詞類</option><option value="pattern">五大句型</option><option value="tense">12時態</option><option value="relative">關係代名詞</option><option value="noun_clause">名詞子句</option><option value="causative">使役動詞</option><option value="linking">連綴動詞</option><option value="sense">感官動詞</option><option value="participle">分詞構句</option><option value="inversion">倒裝句</option><option value="structure_review">句型結構總複習</option><option value="reading">綜合閱讀練習</option></optgroup>
                                 </select>
-                                <select id="form-level" class="w-full px-2 py-1.5 bg-slate-950 border border-slate-850 rounded-lg text-[10px] text-slate-300">${Array.from({length: 30}, (_, i) => i + 1).map(l => `<option value="${l}">L${l}</option>`).join('')}</select>
-                                <select id="form-unit" class="w-full px-2 py-1.5 bg-slate-950 border border-slate-850 rounded-lg text-[10px] text-slate-300">${[1,2,3,4,5,6,7,8,9,10].map(u => `<option value="${u}">U${u}</option>`).join('')}</select>
+                                <select id="form-level" class="w-full px-2 py-1.5 bg-slate-950 border border-slate-850 rounded-lg text-[10px] text-slate-300">${Array.from({length: 30}, function(_, i){return i + 1;}).map(function(l){return `<option value="${l}">L${l}</option>`}).join('')}</select>
+                                <select id="form-unit" class="w-full px-2 py-1.5 bg-slate-950 border border-slate-850 rounded-lg text-[10px] text-slate-300">${[1,2,3,4,5,6,7,8,9,10].map(function(u){return `<option value="${u}">U${u}</option>`}).join('')}</select>
                             </div>
                             <div class="grid grid-cols-2 gap-3">
                                 <div><input type="text" id="form-example" placeholder="英文例句" class="w-full px-3 py-2 bg-slate-950 border border-slate-850 rounded-lg text-xs text-slate-100 outline-none focus:border-orange-500" /></div>
@@ -2462,7 +2489,10 @@
                 </div>
             `;
             renderCustomLibraryTable();
-            if (userState.autoSyncUrl) document.getElementById('github-url-input').value = userState.autoSyncUrl;
+            if (userState.autoSyncUrl) {
+                const urlInput = document.getElementById('github-url-input');
+                if (urlInput) urlInput.value = userState.autoSyncUrl;
+            }
         }
 
         function insertTemplateText() {
@@ -2473,36 +2503,37 @@
         function fillModalSampleUrl() {
             playSound('click'); const targetInput = document.getElementById('modal-sync-url-input');
             if (targetInput) {
-                targetInput.value = "https://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/0ddd02b88d07bd36e9e4758ba5b210d4575deb54/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/49f41879d4c9ab25de45cf0777051266402cb6e7/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/01633cf85ec1c856535b4b97a7dded4531afe198/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_advanced.json";
+                targetInput.value = "https://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E4%BA%94%E5%A4%A7%E5%8F%A5%E5%9E%8B%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%85%AB%E5%A4%A7%E8%A9%9E%E9%A1%9E%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%8F%A5%E5%9E%8B%E7%B5%90%E6%A7%8B%E6%96%87%E6%B3%95.json";
                 showToast("已成功帶入 GitHub 測試資料庫網址！", "info");
             }
         }
 
         function fillGithubSampleUrl() {
             playSound('click'); const targetInput = document.getElementById('github-url-input');
-            if (targetInput) targetInput.value = "https://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/29a8b124cbe6ed1fbd097b19ae6632750a3e650c/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/0ddd02b88d07bd36e9e4758ba5b210d4575deb54/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/49f41879d4c9ab25de45cf0777051266402cb6e7/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/01633cf85ec1c856535b4b97a7dded4531afe198/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f1457c7092ec4f13d0c8ec4f02c9c8b87e5d34b6/exam_advanced.json";
+            if (targetInput) targetInput.value = "https://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/affix.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/exam_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_advanced.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_basic.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/vocab_intermediate.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E4%BA%94%E5%A4%A7%E5%8F%A5%E5%9E%8B%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%85%AB%E5%A4%A7%E8%A9%9E%E9%A1%9E%E6%96%87%E6%B3%95.json\nhttps://raw.githubusercontent.com/less1324-blip/yichentesting/f244b2a14757b2a73b0abb87c4d55927cc5306a2/%E5%8F%A5%E5%9E%8B%E7%B5%90%E6%A7%8B%E6%96%87%E6%B3%95.json";
         }
 
         function saveAdminSyncToGlobal() {
-            const url = document.getElementById('github-url-input')?.value.trim();
+            const urlInput = document.getElementById('github-url-input');
+            const url = urlInput ? urlInput.value.trim() : '';
             if (!url) return;
             userState.autoSyncUrl = url; userState.autoSyncOnLoad = true; saveProgress(); updateSyncBadgeUI(); showToast("💾 已將此雲端網址設定為首頁自動同步連結！", "success");
         }
 
         function normalizeImportedJson(data) {
-            let normalized = { vocab: { basic: {}, intermediate: {}, advanced: {} }, phrase: {}, affix: {}, exam: { basic: {}, intermediate: {}, advanced: {} }, grammar: { pattern: {}, pos: {}, relative: {}, noun_clause: {}, causative: {}, linking: {}, participle: {}, sense: {}, inversion: {}, tense: {}, reading: {} } };
-            ['basic', 'intermediate', 'advanced'].forEach(d => { 
+            let normalized = { vocab: { basic: {}, intermediate: {}, advanced: {} }, phrase: {}, affix: {}, exam: { basic: {}, intermediate: {}, advanced: {} }, grammar: { pos: {}, pattern: {}, tense: {}, relative: {}, noun_clause: {}, causative: {}, linking: {}, sense: {}, participle: {}, inversion: {}, structure_review: {}, reading: {} } };
+            ['basic', 'intermediate', 'advanced'].forEach(function(d) { 
                 for(let i=1;i<=10;i++) { normalized.vocab[d][i] = []; }
                 for(let i=1;i<=30;i++) { normalized.exam[d][i] = []; }
             });
             for(let i=1;i<=10;i++) { normalized.phrase[i] = []; normalized.affix[i] = []; }
-            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
+            ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
                 for(let i=1;i<=30;i++) { normalized.grammar[unit][i] = []; }
             });
             if (!data || typeof data !== 'object') return null;
 
-            const processList = (list, type, diffOrUnit, lvl) => {
-                list.forEach(item => {
+            const processList = function(list, type, diffOrUnit, lvl) {
+                list.forEach(function(item) {
                     if ((type === 'exam' || type === 'grammar') && item.question) {
                         const targetObj = {
                             question: String(item.question || "").trim(),
@@ -2529,25 +2560,47 @@
 
             if (data.vocab) {
                 if (data.vocab.basic || data.vocab.intermediate || data.vocab.advanced) {
-                    ['basic', 'intermediate', 'advanced'].forEach(diff => {
-                        if (data.vocab[diff]) for (let lvl = 1; lvl <= 10; lvl++) if (Array.isArray(data.vocab[diff][lvl])) processList(data.vocab[diff][lvl], 'vocab', diff, lvl);
+                    ['basic', 'intermediate', 'advanced'].forEach(function(diff) {
+                        if (data.vocab[diff]) {
+                            for (let lvl = 1; lvl <= 10; lvl++) {
+                                if (Array.isArray(data.vocab[diff][lvl])) processList(data.vocab[diff][lvl], 'vocab', diff, lvl);
+                            }
+                        }
                     });
                 } else {
-                    for (let lvl = 1; lvl <= 10; lvl++) if (Array.isArray(data.vocab[lvl])) processList(data.vocab[lvl], 'vocab', 'basic', lvl);
+                    for (let lvl = 1; lvl <= 10; lvl++) {
+                        if (Array.isArray(data.vocab[lvl])) processList(data.vocab[lvl], 'vocab', 'basic', lvl);
+                    }
                 }
             }
             if (data.exam) {
-                ['basic', 'intermediate', 'advanced'].forEach(diff => {
-                    if (data.exam[diff]) for (let lvl = 1; lvl <= 30; lvl++) if (Array.isArray(data.exam[diff][lvl])) processList(data.exam[diff][lvl], 'exam', diff, lvl);
+                ['basic', 'intermediate', 'advanced'].forEach(function(diff) {
+                    if (data.exam[diff]) {
+                        for (let lvl = 1; lvl <= 30; lvl++) {
+                            if (Array.isArray(data.exam[diff][lvl])) processList(data.exam[diff][lvl], 'exam', diff, lvl);
+                        }
+                    }
                 });
             }
             if (data.grammar) {
-                ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
-                    if (data.grammar[unit]) for (let lvl = 1; lvl <= 30; lvl++) if (Array.isArray(data.grammar[unit][lvl])) processList(data.grammar[unit][lvl], 'grammar', unit, lvl);
+                ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
+                    if (data.grammar[unit]) {
+                        for (let lvl = 1; lvl <= 30; lvl++) {
+                            if (Array.isArray(data.grammar[unit][lvl])) processList(data.grammar[unit][lvl], 'grammar', unit, lvl);
+                        }
+                    }
                 });
             }
-            if (data.phrase) for (let lvl = 1; lvl <= 10; lvl++) if (Array.isArray(data.phrase[lvl])) processList(data.phrase[lvl], 'phrase', null, lvl);
-            if (data.affix) for (let lvl = 1; lvl <= 10; lvl++) if (Array.isArray(data.affix[lvl])) processList(data.affix[lvl], 'affix', null, lvl);
+            if (data.phrase) {
+                for (let lvl = 1; lvl <= 10; lvl++) {
+                    if (Array.isArray(data.phrase[lvl])) processList(data.phrase[lvl], 'phrase', null, lvl);
+                }
+            }
+            if (data.affix) {
+                for (let lvl = 1; lvl <= 10; lvl++) {
+                    if (Array.isArray(data.affix[lvl])) processList(data.affix[lvl], 'affix', null, lvl);
+                }
+            }
             return normalized;
         }
 
@@ -2555,20 +2608,21 @@
             playSound('click'); const urlInput = document.getElementById('github-url-input'); const fetchBtn = document.getElementById('github-fetch-btn');
             if (!urlInput || !fetchBtn || !urlInput.value.trim()) return;
             const origBtnHtml = fetchBtn.innerHTML; fetchBtn.disabled = true; fetchBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-1.5"></i> 下載同步中...`;
-            const importMode = document.querySelector('input[name="github-import-mode"]:checked').value; 
+            const importModeNode = document.querySelector('input[name="github-import-mode"]:checked');
+            const importMode = importModeNode ? importModeNode.value : 'merge';
             
             if (importMode === 'overwrite') {
-                ['basic', 'intermediate', 'advanced'].forEach(d => { 
+                ['basic', 'intermediate', 'advanced'].forEach(function(d) { 
                     for(let l=1; l<=10; l++) { mainDatabase.vocab[d][l] = []; }
                     for(let l=1; l<=30; l++) { mainDatabase.exam[d][l] = []; }
                 });
                 for(let l=1; l<=10; l++) { mainDatabase.phrase[l] = []; mainDatabase.affix[l] = []; }
-                ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
+                ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
                     for(let l=1; l<=30; l++) { mainDatabase.grammar[unit][l] = []; }
                 });
             }
             
-            let urls = urlInput.value.split('\n').map(u => u.trim()).filter(u => u.length > 0);
+            let urls = urlInput.value.split('\n').map(function(u){return u.trim()}).filter(function(u){return u.length > 0});
             
             let successCount = 0;
             for (let rawUrl of urls) {
@@ -2578,23 +2632,38 @@
                 try {
                     const res = await fetch(url);
                     if (res.ok) {
-                        const data = normalizeImportedJson(await res.json());
+                        const rawText = await res.text();
+                        const cleanedText = rawText.replace(/,\s*([\]}])/g, '$1');
+                        let rawData;
+                        try { rawData = JSON.parse(cleanedText); } catch (e) { continue; }
+                        const data = normalizeImportedJson(rawData);
+
                         if (data) {
-                            ['basic', 'intermediate', 'advanced'].forEach(d => {
+                            ['basic', 'intermediate', 'advanced'].forEach(function(d) {
                                 for(let l=1; l<=10; l++) {
-                                    data.vocab[d][l].forEach(item => { if(importMode === 'overwrite' || !mainDatabase.vocab[d][l].some(x => x.word === item.word)) mainDatabase.vocab[d][l].push(item); });
+                                    if (data.vocab[d] && data.vocab[d][l]) {
+                                        data.vocab[d][l].forEach(function(item) { if(importMode === 'overwrite' || !mainDatabase.vocab[d][l].some(function(x) { return x.word === item.word })) mainDatabase.vocab[d][l].push(item); });
+                                    }
                                 }
                                 for(let l=1; l<=30; l++) {
-                                    data.exam[d][l].forEach(item => { if(importMode === 'overwrite' || !mainDatabase.exam[d][l].some(x => x.question === item.question)) mainDatabase.exam[d][l].push(item); });
+                                    if (data.exam[d] && data.exam[d][l]) {
+                                        data.exam[d][l].forEach(function(item) { if(importMode === 'overwrite' || !mainDatabase.exam[d][l].some(function(x) { return x.question === item.question })) mainDatabase.exam[d][l].push(item); });
+                                    }
                                 }
                             });
                             for(let l=1; l<=10; l++) {
-                                data.phrase[l].forEach(item => { if(importMode === 'overwrite' || !mainDatabase.phrase[l].some(x => x.word === item.word)) mainDatabase.phrase[l].push(item); });
-                                data.affix[l].forEach(item => { if(importMode === 'overwrite' || !mainDatabase.affix[l].some(x => x.word === item.word)) mainDatabase.affix[l].push(item); });
+                                if (data.phrase && data.phrase[l]) {
+                                    data.phrase[l].forEach(function(item) { if(importMode === 'overwrite' || !mainDatabase.phrase[l].some(function(x) { return x.word === item.word })) mainDatabase.phrase[l].push(item); });
+                                }
+                                if (data.affix && data.affix[l]) {
+                                    data.affix[l].forEach(function(item) { if(importMode === 'overwrite' || !mainDatabase.affix[l].some(function(x) { return x.word === item.word })) mainDatabase.affix[l].push(item); });
+                                }
                             }
-                            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
+                            ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
                                 for(let l=1; l<=30; l++) {
-                                    data.grammar[unit][l].forEach(item => { if(importMode === 'overwrite' || !mainDatabase.grammar[unit][l].some(x => x.question === item.question)) mainDatabase.grammar[unit][l].push(item); });
+                                    if (data.grammar[unit] && data.grammar[unit][l]) {
+                                        data.grammar[unit][l].forEach(function(item) { if(importMode === 'overwrite' || !mainDatabase.grammar[unit][l].some(function(x){ return x.question === item.question })) mainDatabase.grammar[unit][l].push(item); });
+                                    }
                                 }
                             });
                             successCount++;
@@ -2605,7 +2674,7 @@
 
             if (successCount > 0) {
                 playSound('levelUp'); showToast(`成功提取 ${successCount} 個雲端法陣！`, "success");
-                setTimeout(() => { userState.currentTab = 'list'; saveProgress(); updateTabButtonsUI(); renderContent(); }, 1000);
+                setTimeout(function() { userState.currentTab = 'list'; saveProgress(); updateTabButtonsUI(); renderContent(); }, 1000);
             } else {
                 playSound('wrong'); showToast("下載失敗，請檢查網址", "error");
             }
@@ -2614,7 +2683,15 @@
 
         async function backgroundSync(rawUrlStr, mode) {
             if (!rawUrlStr) return;
-            let urls = rawUrlStr.split('\n').map(u => u.trim()).filter(u => u.length > 0);
+            const syncIcon = document.getElementById('header-sync-icon');
+            const syncStatus = document.getElementById('header-sync-status');
+            const syncBadge = document.getElementById('header-sync-badge');
+            
+            if (syncIcon) syncIcon.className = "fa-solid fa-arrows-rotate animate-spin text-blue-400";
+            if (syncStatus) { syncStatus.textContent = "同步中..."; syncStatus.className = "text-[11px] font-black text-blue-400"; }
+            if (syncBadge) syncBadge.className = "flex items-center gap-2 px-3 py-1.5 bg-slate-900 border border-blue-500/50 rounded-xl cursor-pointer shadow-neon-blue scale-95 transition-all text-blue-400";
+
+            let urls = rawUrlStr.split('\n').map(function(u){return u.trim()}).filter(function(u){return u.length > 0});
             let syncedAnything = false;
             
             for (let rawUrl of urls) {
@@ -2623,63 +2700,67 @@
                     const res = await fetch(url);
                     if (res.ok) {
                         if (mode === 'overwrite' && !syncedAnything) { 
-                            ['basic', 'intermediate', 'advanced'].forEach(d => { 
+                            ['basic', 'intermediate', 'advanced'].forEach(function(d) { 
                                 for(let l=1; l<=10; l++) { mainDatabase.vocab[d][l] = []; }
                                 for(let l=1; l<=30; l++) { mainDatabase.exam[d][l] = []; }
                             });
                             for(let l=1; l<=10; l++) { mainDatabase.phrase[l] = []; mainDatabase.affix[l] = []; }
-                            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
+                            ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
                                 for(let l=1; l<=30; l++) { mainDatabase.grammar[unit][l] = []; }
                             });
                         }
-                        const data = normalizeImportedJson(await res.json());
+                        const rawText = await res.text();
+                        const cleanedText = rawText.replace(/,\s*([\]}])/g, '$1');
+                        let rawData;
+                        try { rawData = JSON.parse(cleanedText); } catch (e) { continue; }
+                        const data = normalizeImportedJson(rawData);
+
                         if (data) {
-                            ['basic', 'intermediate', 'advanced'].forEach(d => {
+                            ['basic', 'intermediate', 'advanced'].forEach(function(d) {
                                 for(let l=1; l<=10; l++) {
-                                    data.vocab[d][l].forEach(item => { if(!mainDatabase.vocab[d][l].some(x => x.word === item.word)) mainDatabase.vocab[d][l].push(item); });
+                                    if (data.vocab[d] && data.vocab[d][l]) {
+                                        data.vocab[d][l].forEach(function(item) { if(mode === 'overwrite' || !mainDatabase.vocab[d][l].some(function(x) { return x.word === item.word })) mainDatabase.vocab[d][l].push(item); });
+                                    }
                                 }
                                 for(let l=1; l<=30; l++) {
-                                    data.exam[d][l].forEach(item => { if(!mainDatabase.exam[d][l].some(x => x.question === item.question)) mainDatabase.exam[d][l].push(item); });
+                                    if (data.exam[d] && data.exam[d][l]) {
+                                        data.exam[d][l].forEach(function(item) { if(mode === 'overwrite' || !mainDatabase.exam[d][l].some(function(x) { return x.question === item.question })) mainDatabase.exam[d][l].push(item); });
+                                    }
                                 }
                             });
                             for(let l=1; l<=10; l++) {
-                                data.phrase[l].forEach(item => { if(!mainDatabase.phrase[l].some(x => x.word === item.word)) mainDatabase.phrase[l].push(item); });
-                                data.affix[l].forEach(item => { if(!mainDatabase.affix[l].some(x => x.word === item.word)) mainDatabase.affix[l].push(item); });
+                                if (data.phrase && data.phrase[l]) {
+                                    data.phrase[l].forEach(function(item) { if(mode === 'overwrite' || !mainDatabase.phrase[l].some(function(x) { return x.word === item.word })) mainDatabase.phrase[l].push(item); });
+                                }
+                                if (data.affix && data.affix[l]) {
+                                    data.affix[l].forEach(function(item) { if(mode === 'overwrite' || !mainDatabase.affix[l].some(function(x) { return x.word === item.word })) mainDatabase.affix[l].push(item); });
+                                }
                             }
-                            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
+                            ['pos', 'pattern', 'tense', 'relative', 'noun_clause', 'causative', 'linking', 'sense', 'participle', 'inversion', 'structure_review', 'reading'].forEach(function(unit) {
                                 for(let l=1; l<=30; l++) {
-                                    data.grammar[unit][l].forEach(item => { if(!mainDatabase.grammar[unit][l].some(x => x.question === item.question)) mainDatabase.grammar[unit][l].push(item); });
+                                    if (data.grammar[unit] && data.grammar[unit][l]) {
+                                        data.grammar[unit][l].forEach(function(item) { if(mode === 'overwrite' || !mainDatabase.grammar[unit][l].some(function(x){ return x.question === item.question })) mainDatabase.grammar[unit][l].push(item); });
+                                    }
                                 }
                             });
                             syncedAnything = true;
                         }
                     }
-                } catch(e) {}
+                } catch(e) { console.error("Sync failed for URL:", url); }
             }
+
             if (syncedAnything) {
-                saveProgress(); renderContent(); showToast("背景同步合併完成", "success");
+                saveProgress(); renderContent(); updateHeaderUI();
+                if (syncIcon) syncIcon.className = "fa-solid fa-circle-check text-emerald-400";
+                if (syncStatus) { syncStatus.textContent = "同步完成"; syncStatus.className = "text-[11px] font-black text-emerald-400"; }
+                if (syncBadge) syncBadge.className = "flex items-center gap-2 px-3 py-1.5 bg-slate-900 border border-emerald-500/50 rounded-xl cursor-pointer shadow-neon-emerald text-emerald-400";
+                setTimeout(updateSyncBadgeUI, 4000);
+            } else {
+                if (syncIcon) syncIcon.className = "fa-solid fa-circle-exclamation text-rose-400 animate-pulse";
+                if (syncStatus) { syncStatus.textContent = "連線失敗"; syncStatus.className = "text-[11px] font-black text-rose-400"; }
+                if (syncBadge) syncBadge.className = "flex items-center gap-2 px-3 py-1.5 bg-slate-900 border border-rose-500/50 rounded-xl cursor-pointer text-rose-400";
+                setTimeout(updateSyncBadgeUI, 4000);
             }
-            setTimeout(updateSyncBadgeUI, 2000);
-        }
-
-        function openSyncSettingsModal() {
-            playSound('click');
-            const modal = document.getElementById('sync-settings-modal');
-            const urlInput = document.getElementById('modal-sync-url-input');
-            const modeSelect = document.getElementById('modal-sync-mode');
-            const onloadSelect = document.getElementById('modal-sync-onload');
-            if (urlInput) urlInput.value = userState.autoSyncUrl || "";
-            if (modeSelect) modeSelect.value = userState.autoSyncMode || "merge";
-            if (onloadSelect) onloadSelect.value = String(userState.autoSyncOnLoad);
-            modal.classList.remove('pointer-events-none', 'opacity-0');
-            modal.firstElementChild.classList.remove('scale-95');
-        }
-
-        function closeSyncSettingsModal() {
-            playSound('click');
-            const modal = document.getElementById('sync-settings-modal');
-            modal.classList.add('pointer-events-none', 'opacity-0');
-            modal.firstElementChild.classList.add('scale-95');
         }
 
         function updateSyncBadgeUI() {
@@ -2687,139 +2768,39 @@
             const syncStatus = document.getElementById('header-sync-status');
             const syncBadge = document.getElementById('header-sync-badge');
             if (!syncIcon || !syncStatus || !syncBadge) return;
-            syncBadge.className = "flex items-center gap-2 px-3 py-1.5 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-blue-500/50 rounded-xl cursor-pointer transition-all active:scale-95 text-slate-400 hover:text-blue-400 group";
+
+            syncBadge.className = "flex items-center gap-2 px-3 py-1.5 bg-slate-900/80 hover:bg-slate-800 border border-slate-850 hover:border-blue-500/50 rounded-xl cursor-pointer transition-all active:scale-95 text-slate-400 hover:text-blue-400 group";
             syncStatus.className = "text-[11px] font-bold";
+
             if (userState.autoSyncUrl && userState.autoSyncUrl.trim() !== "") {
-                syncIcon.className = "fa-solid fa-cloud-arrow-down text-blue-450";
+                syncIcon.className = "fa-solid fa-cloud-arrow-down text-blue-400";
                 syncStatus.textContent = "已連線";
-                syncStatus.className = "text-[11px] font-bold text-blue-455";
+                syncStatus.classList.add('text-blue-400');
             } else {
-                syncIcon.className = "fa-solid fa-cloud text-slate-550";
+                syncIcon.className = "fa-solid fa-cloud text-slate-500";
                 syncStatus.textContent = "手動修行";
-                syncStatus.className = "text-[11px] font-bold text-slate-400";
+                syncStatus.classList.add('text-slate-400');
             }
-        }
-
-        function saveAndTriggerSync() {
-            playSound('click');
-            const urlInput = document.getElementById('modal-sync-url-input');
-            const modeSelect = document.getElementById('modal-sync-mode');
-            const onloadSelect = document.getElementById('modal-sync-onload');
-            if (!urlInput) return;
-            const url = urlInput.value.trim();
-            userState.autoSyncUrl = url;
-            userState.autoSyncMode = modeSelect ? modeSelect.value : "merge";
-            userState.autoSyncOnLoad = onloadSelect ? (onloadSelect.value === "true") : true;
-            saveProgress();
-            updateSyncBadgeUI();
-            closeSyncSettingsModal();
-            if (url !== "") backgroundSync(url, userState.autoSyncMode);
-            else showToast("已清除並儲存同步法陣設定！", "info");
-        }
-
-        function processBulkImport() {
-            const ta = document.getElementById('bulk-import-area'); if (!ta || !ta.value.trim()) return;
-            const diff = document.getElementById('bulk-difficulty').value, lvl = parseInt(document.getElementById('bulk-level').value), unit = parseInt(document.getElementById('bulk-unit').value);
-            let added = 0;
-            ta.value.trim().split(/\n\s*\n/).forEach(block => {
-                const lines = block.split('\n').filter(l => l.trim().length > 0);
-                if(lines.length >= 2) {
-                    let w = lines[0].replace(/[\u4e00-\u9fa5].*/, '').trim(), c = lines[0].substring(w.length).trim();
-                    let eg = "", egC = "", cq = "", cc = "", ca = w;
-                    for(let i=1; i<lines.length; i++) {
-                        let l = lines[i].toLowerCase();
-                        if(l.startsWith("cloze:")) cq = lines[i].replace(/^cloze:\s*/i, "").trim();
-                        else if(l.startsWith("clozecn:")) cc = lines[i].replace(/^clozecn:\s*/i, "").trim();
-                        else if(l.startsWith("clozeans:")) ca = lines[i].replace(/^clozeans:\s*/i, "").trim();
-                        else if(!eg) eg = lines[i].replace(/^Eg\d*:\s*/i, "").trim();
-                        else if(!egC) egC = lines[i].trim();
-                    }
-                    if (w && c) {
-                        const targetObj = { word: w, chinese: c, example: eg, exampleCn: egC, clozeQuestion: cq, clozeCn: cc, clozeAnswer: ca, unit: unit };
-                        const dojo = document.getElementById('bulk-dojo').value;
-                        let targetDojo = dojo;
-                        if(dojo === 'auto') targetDojo = w.includes(" ") ? 'phrase' : 'vocab';
-                        
-                        if(targetDojo === 'vocab') { mainDatabase.vocab[diff][lvl].push(targetObj); added++; }
-                        else if (targetDojo === 'phrase') { mainDatabase.phrase[lvl].push(targetObj); added++; }
-                        else if (targetDojo === 'affix') { mainDatabase.affix[lvl].push(targetObj); added++; }
-                        else if (targetDojo === 'grammar') { mainDatabase.grammar[diff][lvl].push(targetObj); added++; }
-                    }
-                }
-            });
-            if (added > 0) { ta.value = ""; saveProgress(); showToast(`成功解析匯入！`, "success"); }
-        }
-
-        function saveSingleFormItem() {
-            const w = document.getElementById('form-word').value.trim(), c = document.getElementById('form-chinese').value.trim();
-            if(!w || !c) return;
-            const dojo = document.getElementById('form-dojo').value, diff = document.getElementById('form-difficulty').value, lvl = parseInt(document.getElementById('form-level').value), unit = parseInt(document.getElementById('form-unit').value);
-            const item = { word: w, chinese: c, example: document.getElementById('form-example').value.trim(), exampleCn: document.getElementById('form-example-cn').value.trim(), clozeQuestion: document.getElementById('form-cloze-q').value.trim(), clozeCn: document.getElementById('form-cloze-cn').value.trim(), clozeAnswer: document.getElementById('form-cloze-ans').value.trim() || w, unit: unit };
-            
-            if(dojo==='vocab') mainDatabase.vocab[diff][lvl].push(item); 
-            else if(dojo==='phrase') mainDatabase.phrase[lvl].push(item);
-            else if(dojo==='affix') mainDatabase.affix[lvl].push(item);
-            else if(dojo==='grammar') mainDatabase.grammar[diff][lvl].push(item);
-            
-            saveProgress(); showToast("單字儲存成功！", "success");
-        }
-
-        function renderCustomLibraryTable() {
-            const tbody = document.getElementById('custom-library-tbody'); if (!tbody) return; tbody.innerHTML = '';
-            ['basic', 'intermediate', 'advanced'].forEach(d => {
-                for (let l = 1; l <= 10; l++) {
-                    (mainDatabase.vocab[d]?.[l] || []).forEach((item, idx) => {
-                        tbody.innerHTML += `<tr class="border-b border-slate-900/60"><td class="py-2.5 px-3 text-slate-100 font-bold">${item.word}</td><td class="py-2.5 px-3 text-slate-300 truncate">${item.chinese}</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-800">單字 ${d} L${l} U${item.unit}</span></td><td class="py-2.5 px-3 text-center"><button onclick="deleteDatabaseItem('vocab', '${d}', ${l}, ${idx})" class="text-rose-450 hover:text-rose-300"><i class="fa-solid fa-trash-can"></i></button></td></tr>`;
-                    });
-                }
-                for (let l = 1; l <= 30; l++) {
-                    (mainDatabase.exam[d]?.[l] || []).forEach((item, idx) => {
-                        tbody.innerHTML += `<tr class="border-b border-slate-900/60"><td class="py-2.5 px-3 text-purple-300 font-bold truncate max-w-[150px]">${item.question}</td><td class="py-2.5 px-3 text-slate-300 truncate max-w-[150px]">解答: ${item.answer}</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-800">考題 ${d} L${l}</span></td><td class="py-2.5 px-3 text-center"><button onclick="deleteDatabaseItem('exam', '${d}', ${l}, ${idx})" class="text-rose-450 hover:text-rose-300"><i class="fa-solid fa-trash-can"></i></button></td></tr>`;
-                    });
-                }
-            });
-            for (let l = 1; l <= 10; l++) {
-                (mainDatabase.phrase?.[l] || []).forEach((item, idx) => {
-                    tbody.innerHTML += `<tr class="border-b border-slate-900/60"><td class="py-2.5 px-3 text-blue-300 font-bold">${item.word}</td><td class="py-2.5 px-3 text-slate-300 truncate">${item.chinese}</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-800">片語 L${l} U${item.unit}</span></td><td class="py-2.5 px-3 text-center"><button onclick="deleteDatabaseItem('phrase', null, ${l}, ${idx})" class="text-rose-450 hover:text-rose-300"><i class="fa-solid fa-trash-can"></i></button></td></tr>`;
-                });
-                (mainDatabase.affix?.[l] || []).forEach((item, idx) => {
-                    tbody.innerHTML += `<tr class="border-b border-slate-900/60"><td class="py-2.5 px-3 text-emerald-300 font-bold">${item.word}</td><td class="py-2.5 px-3 text-slate-300 truncate">${item.chinese}</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-800">字根字首 L${l}</span></td><td class="py-2.5 px-3 text-center"><button onclick="deleteDatabaseItem('affix', null, ${l}, ${idx})" class="text-rose-450 hover:text-rose-300"><i class="fa-solid fa-trash-can"></i></button></td></tr>`;
-                });
-            }
-            ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
-                for (let l = 1; l <= 30; l++) {
-                    (mainDatabase.grammar[unit]?.[l] || []).forEach((item, idx) => {
-                        tbody.innerHTML += `<tr class="border-b border-slate-900/60"><td class="py-2.5 px-3 text-rose-300 font-bold truncate max-w-[150px]">${item.question || item.word}</td><td class="py-2.5 px-3 text-slate-300 truncate max-w-[150px]">解答: ${item.answer || item.chinese}</td><td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded text-[9px] bg-slate-900 border border-slate-800">文法 ${unit} L${l}</span></td><td class="py-2.5 px-3 text-center"><button onclick="deleteDatabaseItem('grammar', '${unit}', ${l}, ${idx})" class="text-rose-450 hover:text-rose-300"><i class="fa-solid fa-trash-can"></i></button></td></tr>`;
-                    });
-                }
-            });
-        }
-        
-        function deleteDatabaseItem(dojo, diff, lvl, idx) { 
-            playSound('wrong'); 
-            if(dojo==='vocab') mainDatabase.vocab[diff][lvl].splice(idx,1); 
-            else if(dojo==='phrase') mainDatabase.phrase[lvl].splice(idx,1); 
-            else if(dojo==='affix') mainDatabase.affix[lvl].splice(idx,1); 
-            else if(dojo==='exam') mainDatabase.exam[diff][lvl].splice(idx,1); 
-            else if(dojo==='grammar') mainDatabase.grammar[diff][lvl].splice(idx,1);
-            saveProgress(); renderCustomLibraryTable(); 
         }
 
         function openStatsModal() {
             playSound('click');
             const modal = document.getElementById('stats-dashboard-modal');
+            if (!modal) return;
+            
             document.getElementById('stats-total-answered').textContent = userState.totalAnswered;
             const accuracy = userState.totalAnswered > 0 ? Math.round((userState.correctCount / userState.totalAnswered) * 100) : 0;
             document.getElementById('stats-accuracy').textContent = `${accuracy}%`;
             document.getElementById('stats-current-streak').textContent = userState.streak;
             document.getElementById('stats-highest-streak').textContent = userState.highestStreak || 0;
+            
             let cefr = "A1 (築基)";
-            if (userState.totalAnswered > 15) cefr = "A2 (煉氣)";
-            if (userState.totalAnswered > 45) cefr = "B1 (結丹)";
-            if (userState.totalAnswered > 90) cefr = "B2 (元嬰)";
-            if (userState.totalAnswered > 150) cefr = "C1 (化神)";
-            if (userState.totalAnswered > 250) cefr = "C2 (渡劫仙尊)";
+            if (userState.totalAnswered > 500 && accuracy > 85) cefr = "C1 (化神)";
+            else if (userState.totalAnswered > 300 && accuracy > 80) cefr = "B2 (元嬰)";
+            else if (userState.totalAnswered > 150 && accuracy > 70) cefr = "B1 (金丹)";
+            else if (userState.totalAnswered > 50 && accuracy > 60) cefr = "A2 (結丹)";
             document.getElementById('stats-cefr-rank').textContent = cefr;
+
             modal.classList.remove('pointer-events-none', 'opacity-0');
             modal.firstElementChild.classList.remove('scale-95');
         }
@@ -2827,103 +2808,42 @@
         function closeStatsModal() {
             playSound('click');
             const modal = document.getElementById('stats-dashboard-modal');
-            modal.classList.add('pointer-events-none', 'opacity-0');
-            modal.firstElementChild.classList.add('scale-95');
+            if (modal) {
+                modal.classList.add('pointer-events-none', 'opacity-0');
+                modal.firstElementChild.classList.add('scale-95');
+            }
         }
 
         function resetStats() {
-            playSound('click');
-            const modal = document.getElementById('custom-confirm-modal');
-            document.getElementById('confirm-modal-title').textContent = "確定重置修行進度與連擊統計？";
-            document.getElementById('confirm-modal-desc').textContent = "此操作將會把您修煉數據中的連擊次數、修行次數以及正確率重設歸零，但不會影響已導入的英文字彙庫。";
-            modal.classList.remove('pointer-events-none', 'opacity-0');
-            modal.firstElementChild.classList.remove('scale-95');
-            
-            document.getElementById('confirm-modal-cancel').onclick = () => {
-                playSound('click');
-                modal.classList.add('pointer-events-none', 'opacity-0');
-                modal.firstElementChild.classList.add('scale-95');
-            };
-            
-            document.getElementById('confirm-modal-proceed').onclick = () => {
-                playSound('click');
-                userState.totalAnswered = 0; userState.correctCount = 0; userState.streak = 0; userState.highestStreak = 0; userState.exp = 0;
-                saveProgress(); updateHeaderUI(); closeStatsModal();
-                modal.classList.add('pointer-events-none', 'opacity-0');
-                modal.firstElementChild.classList.add('scale-95');
-                showToast("📊 修煉統計數據已重新回歸虛無！", "success");
-            };
+            playSound('wrong');
+            userState.totalAnswered = 0; userState.correctCount = 0; userState.streak = 0; userState.highestStreak = 0; userState.exp = 0;
+            saveProgress(); updateHeaderUI(); openStatsModal();
+            showToast("數據已重置", "info");
         }
-
-        function clearDatabaseSource(sourceKey) {
-            playSound('click');
-            const modal = document.getElementById('custom-confirm-modal');
-            document.getElementById('confirm-modal-title').textContent = "確定清空所有修煉大典嗎？";
-            document.getElementById('confirm-modal-desc').textContent = "此動作將完全刪除修煉大典下所有的境界 Level 1 ~ 30 的英文字彙及生活例句，且無法還原！";
-            modal.classList.remove('pointer-events-none', 'opacity-0');
-            modal.firstElementChild.classList.remove('scale-95');
-            
-            document.getElementById('confirm-modal-cancel').onclick = () => {
-                playSound('click');
-                modal.classList.add('pointer-events-none', 'opacity-0');
-                modal.firstElementChild.classList.add('scale-95');
-            };
-            
-            document.getElementById('confirm-modal-proceed').onclick = () => {
-                playSound('wrong');
-                mainDatabase = { vocab: { basic: {}, intermediate: {}, advanced: {} }, phrase: {}, affix: {}, exam: { basic: {}, intermediate: {}, advanced: {} }, grammar: { pattern: {}, pos: {}, relative: {}, noun_clause: {}, causative: {}, linking: {}, participle: {}, sense: {}, inversion: {}, tense: {}, reading: {} } };
-                ['basic', 'intermediate', 'advanced'].forEach(d => { 
-                    for(let l=1; l<=10; l++) { mainDatabase.vocab[d][l] = []; }
-                    for(let l=1; l<=30; l++) { mainDatabase.exam[d][l] = []; }
-                });
-                for(let l=1; l<=10; l++) { mainDatabase.phrase[l] = []; mainDatabase.affix[l] = []; }
-                ['pattern', 'pos', 'relative', 'noun_clause', 'causative', 'linking', 'participle', 'sense', 'inversion', 'tense', 'reading'].forEach(unit => {
-                    for(let l=1; l<=30; l++) { mainDatabase.grammar[unit][l] = []; }
-                });
-                saveProgress(); renderCustomLibraryTable();
-                modal.classList.add('pointer-events-none', 'opacity-0');
-                modal.firstElementChild.classList.add('scale-95');
-                showToast("修煉大典已完全淨化清空！", "error");
-            };
-        }
-
-        window.onkeydown = function(e) {
-            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
-            const dataList = getActiveDataList(); if (dataList.length === 0) return;
-            
-            if ((userState.currentDojo === 'exam' || userState.currentDojo === 'grammar') && userState.currentTab === 'quiz') {
-                if (['1', '2', '3', '4'].includes(e.key)) { 
-                    const btns = document.querySelectorAll('.exam-option-btn'); 
-                    const targetIdx = parseInt(e.key) - 1; 
-                    if (btns[targetIdx] && !btns[targetIdx].disabled) btns[targetIdx].click(); 
-                }
-                else if (e.key === 'Enter') { 
-                    const feedbackContainer = document.getElementById('exam-feedback-container');
-                    if (feedbackContainer && !feedbackContainer.classList.contains('hidden')) {
-                        const btn = feedbackContainer.querySelector('button');
-                        if (btn) btn.click();
-                    }
-                }
-            } else if (userState.currentTab === 'flashcard') {
-                if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); flipFlashcard(); }
-                else if (e.key === 'ArrowLeft') navigateFlashcard(-1, dataList.length); else if (e.key === 'ArrowRight') navigateFlashcard(1, dataList.length);
-            } else if (userState.currentTab === 'quiz') {
-                if (['1', '2', '3', '4'].includes(e.key)) { const btns = document.querySelectorAll('#quiz-options-container button'); const targetIdx = parseInt(e.key) - 1; if (btns[targetIdx] && !btns[targetIdx].disabled) btns[targetIdx].click(); }
-                else if (e.key === 'Enter') { const btn = document.querySelector('#quiz-action-bar button'); if (btn && !btn.closest('.hidden')) btn.click(); }
-            }
-        };
 
         window.onload = function() {
             loadProgress();
-            const urlSync = new URLSearchParams(window.location.search).get('sync');
-            if (urlSync) { userState.autoSyncUrl = urlSync.trim(); userState.autoSyncOnLoad = true; saveProgress(); window.history.pushState({}, '', window.location.pathname); }
-            updateDojoTabUI(); renderDifficultySelector(); renderLevelSelector(); renderUnitSelector(); renderContent(); updateHeaderUI(); updateTabButtonsUI(); updateSyncBadgeUI(); updateVoicePanelUI();
-            if (userState.autoSyncOnLoad && userState.autoSyncUrl) backgroundSync(userState.autoSyncUrl, userState.autoSyncMode);
             
-            // 載入後延遲彈出使用說明框
-            setTimeout(() => {
-                openWelcomeGuide();
-            }, 600);
+            if (!localStorage.getItem('welcome_guide_seen_v2')) {
+                setTimeout(openWelcomeGuide, 500);
+                localStorage.setItem('welcome_guide_seen_v2', 'true');
+            }
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlSync = urlParams.get('sync');
+            if (urlSync && urlSync.trim() !== "") {
+                userState.autoSyncUrl = urlSync.trim();
+                userState.autoSyncOnLoad = true;
+                saveProgress();
+                const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                if(window.history.pushState) window.history.pushState({ path: cleanUrl }, '', cleanUrl);
+            }
+
+            updateDojoTabUI(); renderDifficultySelector(); renderLevelSelector(); renderUnitSelector(); renderContent(); updateHeaderUI(); updateTabButtonsUI(); updateSyncBadgeUI(); updateVoicePanelUI();
+
+            if (userState.autoSyncOnLoad && userState.autoSyncUrl && userState.autoSyncUrl.trim() !== "") {
+                backgroundSync(userState.autoSyncUrl, userState.autoSyncMode);
+            }
         };
     </script>
 </body>
